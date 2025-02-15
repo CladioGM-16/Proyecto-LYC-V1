@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;  /* Centrar todo el contenido */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el botón estén en columna */
+    align-items: center; /* Centrar elementos */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenedor img {
+    width: 250px;  /* Reducir tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
