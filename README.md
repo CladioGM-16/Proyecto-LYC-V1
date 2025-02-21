@@ -1,6 +1,7 @@
 # Proyecto-LYC-V1
 En caso que lo quieran hacer de manera local usen en la terminal de VSC python manage.py runserver
 Proyecto-LYC-V1/
+
 │── analizador/      # Esta es la aplicación principal
 
 │   ├── __init__.py  # Archivo de inicio (indica que es un módulo de Python)
