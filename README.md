@@ -10,14 +10,16 @@ Proyecto-LYC-V1/
 │   ├── views.py     # Vistas de la aplicación (lo que se mostrara en las páginas)
 │   ├── templates/   # Plantillas 
 │   ├── static/      # Archivos estaticos (CSS, JS, imagenes)
-│
+
+
 │── Proyecto_lyc/     # Configuracin del proyecto Django
 │   ├── __init__.py   # Archivo de inicio (no tocar)
 │   ├── settings.py   # Configuración principal del proyecto
 │   ├── urls.py       
 │   ├── wsgi.py       # Configuración para el despliegue con WSGI (no tocar por ahora)
 │   ├── asgi.py       # Configuración para el despliegue con ASGI (no tocar por ahora)
-│
+
+
 │── venv/             # Entorno virtual de Python 
 │── db.sqlite3        # Base de datos SQLite (no se usa pero Django por defecto lo crea)
 │── manage.py         # Main
