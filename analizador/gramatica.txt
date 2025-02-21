@@ -1,0 +1,57 @@
+Gramática para la definición de grafos
+
+TOKENS:
+    - palabras_reservadas
+    - identificadores
+    - numeros
+    - simbolos_especiales
+
+PALABRAS_RESERVADAS:
+    - nodo
+    - arista
+    - peso
+    - ruta_minima
+    - eliminar_nodo
+    - eliminar_arista
+
+
+IDENTIFICADORES:
+    - nombre_de_nodos
+
+NUMEROS:
+    - Solo permite números enteros positivos
+
+SIMBOLOS_ESPECIALES:
+    - (   # Paréntesis de apertura
+    - )   # Paréntesis de cierre
+    - ;   # Punto y coma para finalizar instrucciones
+
+
+
+------------------------------------------------------------------------
+                Reglas  (Por definir, idea de GPT)
+------------------------------------------------------------------------
+PROGRAM → SENTENCIA PROGRAM
+        | SENTENCIA
+
+SENTENCIA → CREAR_NODO
+          | CREAR_ARISTA
+          | ELIMINAR_NODO
+          | ELIMINAR_ARISTA
+
+CREAR_NODO → "nodo" "(" IDENTIFICADOR ")" ";"
+
+CREAR_ARISTA → "arista" "(" IDENTIFICADOR "," IDENTIFICADOR "," "peso" "," NUMERO ")" ";"
+
+ELIMINAR_NODO → "eliminar_nodo" "(" IDENTIFICADOR ")" ";"
+
+ELIMINAR_ARISTA → "eliminar_arista" "(" IDENTIFICADOR "," IDENTIFICADOR ")" ";"
+
+# ------------------------
+# Ejemplo de código válido con esta gramática
+# ------------------------
+nodo(A);
+nodo(B);
+arista(A, B, peso, 5);
+eliminar_nodo(A);
+eliminar_arista(A, B);
