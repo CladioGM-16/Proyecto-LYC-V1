@@ -1,5 +1,5 @@
 # Proyecto-LYC-V1
-En caso que lo quieran hacer de manera local usen en la terminal de VSC python manage.py runserver
+En caso que lo quieran hacer de manera local usen en la terminal de VSC pongan  -->  python manage.py runserver
 
 
 │── analizador/      # Esta es la aplicación principal
