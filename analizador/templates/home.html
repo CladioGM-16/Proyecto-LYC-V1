@@ -1,58 +1,85 @@
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Página</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}">
-</head>
-<body>
-
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}" />
+  </head>
+  <body>
     <header>
-        <nav class="rectangle1">
-            <a href="{% url 'about' %}" class="header-link">About (info_proyecto)</a>
-            <a href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git" class="header-link">GitHub</a>
-            <a href="{% url 'info_grafos' %}" class="header-link">Información de Grafos</a>
-            <a href="{% url 'idiomas' %}" class="header-link">Idiomas</a>
-        </nav>
+      <nav class="rectangle1">
+        <a href="{% url 'about' %}" class="header-link"
+          >About (info_proyecto)</a
+        >
+        <a
+          href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
+          class="header-link"
+          >GitHub</a
+        >
+        <a href="{% url 'info_grafos' %}" class="header-link"
+          >Información de Grafos</a
+        >
+        {% load i18n %}
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                <select name="language" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+      </nav>
+      <p>{% translate "SOLO PARA PROBAR LA TRADUCCIÓN" %}</p>
+      {% blocktranslate %}
+      <p>
+        HOLA MI NOMBRE ES JHAIR HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
+        HOLAHOLA HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
+        HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA
+        HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA HOLA
+        HOLA HOLA HOLA HOLA HOLA HOLA HOLA
+      </p>
+      <p>{{message}}</p>
+      {% endblocktranslate %}
     </header>
 
-  
     <main>
-        <div class="main-content">
-            
-         
-            <section class="editor-container">
-                <div class="buttons">
-                    <button onclick="guardarTexto()">Guardar</button>
-                    <button onclick="cargarTexto()">Cargar</button>
-                </div>
-                
-                <div class="code-editor">
-                    <div class="line-numbers" id="lineNumbers"></div>
-                    <textarea id="codeArea" spellcheck="false"></textarea>
-                </div>
+      <div class="main-content">
+        <section class="editor-container">
+          <div class="buttons">
+            <button onclick="guardarTexto()">Guardar</button>
+            <button onclick="cargarTexto()">Cargar</button>
+          </div>
 
-                <div class="output">
-                    <p>Resultado aquí...</p>
-                </div>
-            </section>
+          <div class="code-editor">
+            <div class="line-numbers" id="lineNumbers"></div>
+            <textarea id="codeArea" spellcheck="false"></textarea>
+          </div>
 
-            
-            <aside class="image-container">
-                <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
-            </aside>
-        </div>
+          <div class="output">
+            <p>Resultado aquí...</p>
+          </div>
+        </section>
+
+        <aside class="image-container">
+          <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado" />
+        </aside>
+      </div>
     </main>
 
-    
     <footer>
-        <p>Designed by LyCenciados Corruptos</p>
+      <p>Designed by LyCenciados Corruptos</p>
     </footer>
 
     <!-- JavaScript -->
     <script src="{% static 'js/entrada.js' %}"></script>
-
-</body>
+  </body>
 </html>

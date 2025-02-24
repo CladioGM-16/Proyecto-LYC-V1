@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+#from django.utils.translation import gettext_lazy as _    
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-segura-de-desarrollo')
 DEBUG = "RENDER" not in os.environ
 
 # Lista vacía de ALLOWED_HOSTS
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Obtener el hostname de Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -112,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -121,6 +123,24 @@ USE_I18N = True
 USE_TZ = True
 
 
+LANGUAGES = [
+    ('es', ('Español')),
+    ('en', ('Ingles')),
+    # ('hi', _('Hindi')),
+    # ('fr', _('French')),
+    # ('de', _('German')),
+    # ('zh', _('Chinese')),
+    # ('ko', _('Korean')),
+    # ('ja', _('Japanese')),
+    # ('ru', _('Russian')),
+    # ('it', _('Italian')),
+]
+
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -128,7 +148,7 @@ STATIC_URL = 'Static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "Static")  
+    os.path.join(BASE_DIR,"analizador", "static")  
 ]
 # Activar compresión y almacenamiento en caché para mejorar rendimiento en producción
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
