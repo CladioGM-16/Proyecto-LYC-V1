@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-segura-de-desarrollo')
 DEBUG = "RENDER" not in os.environ
 
 # Lista vacía de ALLOWED_HOSTS
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Obtener el hostname de Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
