@@ -59,13 +59,14 @@ def t_error(t):
     print(f"  Carácter inválido: '{t.value[0]}'")
     
     line_start = max(t.lexer.lexdata.rfind('\n', 0, t.lexpos) + 1, 0)  
-    line_end = t.lexer.lexdata.find('\n', t.lexpos)  
+    line_end = t.lexer.lexdata.find('\n', t.lexpos)
+    if line_end == -1: line_end = len(t.lexer.lexdata)  
     line = t.lexer.lexdata[line_start:line_end]  
     
     # Mostrar la línea donde ocurrió el error
     print(f"  Línea del error: {line}")
-    print(f"  {' ' * (t.lexpos - line_start)}^")  
-    
+    print(f"  {' ' * (t.lexpos - line_start+ 17)}^")    
+
     # Marcar error_ocurrido como True
     t.lexer.error_ocurrido = True  # Establecer bandera de error
 
