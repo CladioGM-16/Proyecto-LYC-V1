@@ -31,7 +31,7 @@ def t_ID(t):
 
 # Función para reconocer números
 def t_NUMBER(t):
-    r'\d+'
+    r'\d+'  
     t.value = int(t.value)  
     return t
 
@@ -39,7 +39,6 @@ def t_NUMBER(t):
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
-    print(f"Actualizando número de línea a {t.lexer.lineno}")
 
 # Ignorar espacios y tabulaciones
 t_ignore = ' \t'
@@ -56,29 +55,57 @@ def t_COMMENT_BLOCK(t):
 
 # Función para manejar errores léxicos
 def t_error(t):
-    raise Exception(f"Error léxico en la posición {t.lexpos}, línea {t.lineno}")
-    # print(f"🛑 Error léxico: Carácter inválido '{t.value[0]}' en la posición {t.lexpos}")
-    # t.lexer.skip(1)
+    print(f"🛑 Error léxico en la línea {t.lineno}, posición {t.lexpos}:")
+    print(f"  Carácter inválido: '{t.value[0]}'")
+    
+    line_start = max(t.lexer.lexdata.rfind('\n', 0, t.lexpos) + 1, 0)  
+    line_end = t.lexer.lexdata.find('\n', t.lexpos)  
+    line = t.lexer.lexdata[line_start:line_end]  
+    
+    # Mostrar la línea donde ocurrió el error
+    print(f"  Línea del error: {line}")
+    print(f"  {' ' * (t.lexpos - line_start)}^")  
+    
+    # Marcar error_ocurrido como True
+    t.lexer.error_ocurrido = True  # Establecer bandera de error
+
+    # No lanzar excepción, solo continuar con el siguiente carácter
+    t.lexer.skip(1)  # Ignorar el carácter inválido y continuar el análisis
+
 
 # Crear una instancia del lexer
 lexer = lex.lex()
 
 # Función para analizar el código de entrada y devolver una lista de tokens
 def analizar_codigo(data):
+    if not data:  # Verificar si la entrada está vacía
+        print("🚫 La entrada está vacía. No se encontraron tokens.")
+        return []  # Regresar una lista vacía
+
     lexer.input(data)
+    lexer.error_ocurrido = False  # Inicializar bandera de error
     tokens_list = []
+    
+    # Procesar cada token en el código
     while True:
         tok = lexer.token()
         if not tok:
-            break  
+            break  # No más tokens
         tokens_list.append(tok)
-        
+
+    # Mostrar mensaje de éxito o error solo al final del proceso
+    if lexer.error_ocurrido:
+        print("⚠️ El análisis léxico terminó con errores.")
+    else:
+        print("✔️ El análisis léxico se completó correctamente.")
+    
     return tokens_list
 
 # Código principal para probar el lexer
 if __name__ == "__main__":
-    codigo_prueba = "nodo(A);\narista(A, B);"
+    # Ejemplo de código válido
     print("\n📌 Análisis Léxico:")
+    codigo_prueba = "nodo(a)\nnodo(@)"
     tokens = analizar_codigo(codigo_prueba)
     print("\n📋 Lista de Tokens:")
     for token in tokens:
