@@ -1,0 +1,398 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> programa
+Rule 1     programa -> declaraciones
+Rule 2     declaraciones -> declaraciones declaracion SEMICOLON
+Rule 3     declaraciones -> declaracion SEMICOLON
+Rule 4     declaracion -> NODO LPAREN ID RPAREN
+Rule 5     declaracion -> ELIMINAR_NODO LPAREN ID RPAREN
+Rule 6     declaracion -> ARISTA LPAREN ID COMMA ID RPAREN
+Rule 7     declaracion -> ARISTA LPAREN ID COMMA ID COMMA NO_D RPAREN
+Rule 8     declaracion -> ELIMINAR_ARISTA LPAREN ID COMMA ID RPAREN
+Rule 9     declaracion -> PESO LPAREN ID COMMA ID COMMA NUMBER RPAREN
+Rule 10    declaracion -> RUTA_MINIMA LPAREN ID COMMA ID RPAREN
+
+Terminals, with rules where they appear
+
+ARISTA               : 6 7
+COMMA                : 6 7 7 8 9 9 10
+ELIMINAR_ARISTA      : 8
+ELIMINAR_NODO        : 5
+ID                   : 4 5 6 6 7 7 8 8 9 9 10 10
+LPAREN               : 4 5 6 7 8 9 10
+NODO                 : 4
+NO_D                 : 7
+NUMBER               : 9
+PESO                 : 9
+RPAREN               : 4 5 6 7 8 9 10
+RUTA_MINIMA          : 10
+SEMICOLON            : 2 3
+error                : 
+
+Nonterminals, with rules where they appear
+
+declaracion          : 2 3
+declaraciones        : 1 2
+programa             : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . programa
+    (1) programa -> . declaraciones
+    (2) declaraciones -> . declaraciones declaracion SEMICOLON
+    (3) declaraciones -> . declaracion SEMICOLON
+    (4) declaracion -> . NODO LPAREN ID RPAREN
+    (5) declaracion -> . ELIMINAR_NODO LPAREN ID RPAREN
+    (6) declaracion -> . ARISTA LPAREN ID COMMA ID RPAREN
+    (7) declaracion -> . ARISTA LPAREN ID COMMA ID COMMA NO_D RPAREN
+    (8) declaracion -> . ELIMINAR_ARISTA LPAREN ID COMMA ID RPAREN
+    (9) declaracion -> . PESO LPAREN ID COMMA ID COMMA NUMBER RPAREN
+    (10) declaracion -> . RUTA_MINIMA LPAREN ID COMMA ID RPAREN
+
+    NODO            shift and go to state 4
+    ELIMINAR_NODO   shift and go to state 5
+    ARISTA          shift and go to state 6
+    ELIMINAR_ARISTA shift and go to state 7
+    PESO            shift and go to state 8
+    RUTA_MINIMA     shift and go to state 9
+
+    programa                       shift and go to state 1
+    declaraciones                  shift and go to state 2
+    declaracion                    shift and go to state 3
+
+state 1
+
+    (0) S' -> programa .
+
+
+
+state 2
+
+    (1) programa -> declaraciones .
+    (2) declaraciones -> declaraciones . declaracion SEMICOLON
+    (4) declaracion -> . NODO LPAREN ID RPAREN
+    (5) declaracion -> . ELIMINAR_NODO LPAREN ID RPAREN
+    (6) declaracion -> . ARISTA LPAREN ID COMMA ID RPAREN
+    (7) declaracion -> . ARISTA LPAREN ID COMMA ID COMMA NO_D RPAREN
+    (8) declaracion -> . ELIMINAR_ARISTA LPAREN ID COMMA ID RPAREN
+    (9) declaracion -> . PESO LPAREN ID COMMA ID COMMA NUMBER RPAREN
+    (10) declaracion -> . RUTA_MINIMA LPAREN ID COMMA ID RPAREN
+
+    $end            reduce using rule 1 (programa -> declaraciones .)
+    NODO            shift and go to state 4
+    ELIMINAR_NODO   shift and go to state 5
+    ARISTA          shift and go to state 6
+    ELIMINAR_ARISTA shift and go to state 7
+    PESO            shift and go to state 8
+    RUTA_MINIMA     shift and go to state 9
+
+    declaracion                    shift and go to state 10
+
+state 3
+
+    (3) declaraciones -> declaracion . SEMICOLON
+
+    SEMICOLON       shift and go to state 11
+
+
+state 4
+
+    (4) declaracion -> NODO . LPAREN ID RPAREN
+
+    LPAREN          shift and go to state 12
+
+
+state 5
+
+    (5) declaracion -> ELIMINAR_NODO . LPAREN ID RPAREN
+
+    LPAREN          shift and go to state 13
+
+
+state 6
+
+    (6) declaracion -> ARISTA . LPAREN ID COMMA ID RPAREN
+    (7) declaracion -> ARISTA . LPAREN ID COMMA ID COMMA NO_D RPAREN
+
+    LPAREN          shift and go to state 14
+
+
+state 7
+
+    (8) declaracion -> ELIMINAR_ARISTA . LPAREN ID COMMA ID RPAREN
+
+    LPAREN          shift and go to state 15
+
+
+state 8
+
+    (9) declaracion -> PESO . LPAREN ID COMMA ID COMMA NUMBER RPAREN
+
+    LPAREN          shift and go to state 16
+
+
+state 9
+
+    (10) declaracion -> RUTA_MINIMA . LPAREN ID COMMA ID RPAREN
+
+    LPAREN          shift and go to state 17
+
+
+state 10
+
+    (2) declaraciones -> declaraciones declaracion . SEMICOLON
+
+    SEMICOLON       shift and go to state 18
+
+
+state 11
+
+    (3) declaraciones -> declaracion SEMICOLON .
+
+    NODO            reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    ELIMINAR_NODO   reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    ARISTA          reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    ELIMINAR_ARISTA reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    PESO            reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    RUTA_MINIMA     reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+    $end            reduce using rule 3 (declaraciones -> declaracion SEMICOLON .)
+
+
+state 12
+
+    (4) declaracion -> NODO LPAREN . ID RPAREN
+
+    ID              shift and go to state 19
+
+
+state 13
+
+    (5) declaracion -> ELIMINAR_NODO LPAREN . ID RPAREN
+
+    ID              shift and go to state 20
+
+
+state 14
+
+    (6) declaracion -> ARISTA LPAREN . ID COMMA ID RPAREN
+    (7) declaracion -> ARISTA LPAREN . ID COMMA ID COMMA NO_D RPAREN
+
+    ID              shift and go to state 21
+
+
+state 15
+
+    (8) declaracion -> ELIMINAR_ARISTA LPAREN . ID COMMA ID RPAREN
+
+    ID              shift and go to state 22
+
+
+state 16
+
+    (9) declaracion -> PESO LPAREN . ID COMMA ID COMMA NUMBER RPAREN
+
+    ID              shift and go to state 23
+
+
+state 17
+
+    (10) declaracion -> RUTA_MINIMA LPAREN . ID COMMA ID RPAREN
+
+    ID              shift and go to state 24
+
+
+state 18
+
+    (2) declaraciones -> declaraciones declaracion SEMICOLON .
+
+    NODO            reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    ELIMINAR_NODO   reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    ARISTA          reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    ELIMINAR_ARISTA reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    PESO            reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    RUTA_MINIMA     reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+    $end            reduce using rule 2 (declaraciones -> declaraciones declaracion SEMICOLON .)
+
+
+state 19
+
+    (4) declaracion -> NODO LPAREN ID . RPAREN
+
+    RPAREN          shift and go to state 25
+
+
+state 20
+
+    (5) declaracion -> ELIMINAR_NODO LPAREN ID . RPAREN
+
+    RPAREN          shift and go to state 26
+
+
+state 21
+
+    (6) declaracion -> ARISTA LPAREN ID . COMMA ID RPAREN
+    (7) declaracion -> ARISTA LPAREN ID . COMMA ID COMMA NO_D RPAREN
+
+    COMMA           shift and go to state 27
+
+
+state 22
+
+    (8) declaracion -> ELIMINAR_ARISTA LPAREN ID . COMMA ID RPAREN
+
+    COMMA           shift and go to state 28
+
+
+state 23
+
+    (9) declaracion -> PESO LPAREN ID . COMMA ID COMMA NUMBER RPAREN
+
+    COMMA           shift and go to state 29
+
+
+state 24
+
+    (10) declaracion -> RUTA_MINIMA LPAREN ID . COMMA ID RPAREN
+
+    COMMA           shift and go to state 30
+
+
+state 25
+
+    (4) declaracion -> NODO LPAREN ID RPAREN .
+
+    SEMICOLON       reduce using rule 4 (declaracion -> NODO LPAREN ID RPAREN .)
+
+
+state 26
+
+    (5) declaracion -> ELIMINAR_NODO LPAREN ID RPAREN .
+
+    SEMICOLON       reduce using rule 5 (declaracion -> ELIMINAR_NODO LPAREN ID RPAREN .)
+
+
+state 27
+
+    (6) declaracion -> ARISTA LPAREN ID COMMA . ID RPAREN
+    (7) declaracion -> ARISTA LPAREN ID COMMA . ID COMMA NO_D RPAREN
+
+    ID              shift and go to state 31
+
+
+state 28
+
+    (8) declaracion -> ELIMINAR_ARISTA LPAREN ID COMMA . ID RPAREN
+
+    ID              shift and go to state 32
+
+
+state 29
+
+    (9) declaracion -> PESO LPAREN ID COMMA . ID COMMA NUMBER RPAREN
+
+    ID              shift and go to state 33
+
+
+state 30
+
+    (10) declaracion -> RUTA_MINIMA LPAREN ID COMMA . ID RPAREN
+
+    ID              shift and go to state 34
+
+
+state 31
+
+    (6) declaracion -> ARISTA LPAREN ID COMMA ID . RPAREN
+    (7) declaracion -> ARISTA LPAREN ID COMMA ID . COMMA NO_D RPAREN
+
+    RPAREN          shift and go to state 36
+    COMMA           shift and go to state 35
+
+
+state 32
+
+    (8) declaracion -> ELIMINAR_ARISTA LPAREN ID COMMA ID . RPAREN
+
+    RPAREN          shift and go to state 37
+
+
+state 33
+
+    (9) declaracion -> PESO LPAREN ID COMMA ID . COMMA NUMBER RPAREN
+
+    COMMA           shift and go to state 38
+
+
+state 34
+
+    (10) declaracion -> RUTA_MINIMA LPAREN ID COMMA ID . RPAREN
+
+    RPAREN          shift and go to state 39
+
+
+state 35
+
+    (7) declaracion -> ARISTA LPAREN ID COMMA ID COMMA . NO_D RPAREN
+
+    NO_D            shift and go to state 40
+
+
+state 36
+
+    (6) declaracion -> ARISTA LPAREN ID COMMA ID RPAREN .
+
+    SEMICOLON       reduce using rule 6 (declaracion -> ARISTA LPAREN ID COMMA ID RPAREN .)
+
+
+state 37
+
+    (8) declaracion -> ELIMINAR_ARISTA LPAREN ID COMMA ID RPAREN .
+
+    SEMICOLON       reduce using rule 8 (declaracion -> ELIMINAR_ARISTA LPAREN ID COMMA ID RPAREN .)
+
+
+state 38
+
+    (9) declaracion -> PESO LPAREN ID COMMA ID COMMA . NUMBER RPAREN
+
+    NUMBER          shift and go to state 41
+
+
+state 39
+
+    (10) declaracion -> RUTA_MINIMA LPAREN ID COMMA ID RPAREN .
+
+    SEMICOLON       reduce using rule 10 (declaracion -> RUTA_MINIMA LPAREN ID COMMA ID RPAREN .)
+
+
+state 40
+
+    (7) declaracion -> ARISTA LPAREN ID COMMA ID COMMA NO_D . RPAREN
+
+    RPAREN          shift and go to state 42
+
+
+state 41
+
+    (9) declaracion -> PESO LPAREN ID COMMA ID COMMA NUMBER . RPAREN
+
+    RPAREN          shift and go to state 43
+
+
+state 42
+
+    (7) declaracion -> ARISTA LPAREN ID COMMA ID COMMA NO_D RPAREN .
+
+    SEMICOLON       reduce using rule 7 (declaracion -> ARISTA LPAREN ID COMMA ID COMMA NO_D RPAREN .)
+
+
+state 43
+
+    (9) declaracion -> PESO LPAREN ID COMMA ID COMMA NUMBER RPAREN .
+
+    SEMICOLON       reduce using rule 9 (declaracion -> PESO LPAREN ID COMMA ID COMMA NUMBER RPAREN .)
+
