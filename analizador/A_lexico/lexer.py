@@ -44,10 +44,21 @@ def t_newline(t):
 # Ignorar espacios y tabulaciones
 t_ignore = ' \t'
 
+# Comentarios de una línea
+def t_COMMENT(t):
+    r'//.*'  
+    pass
+
+# Comentarios multilínea
+def t_COMMENT_BLOCK(t):
+    r'/\*.*?\*/'  
+    pass
+
 # Función para manejar errores léxicos
 def t_error(t):
-    print(f"🛑 Error léxico: Carácter inválido '{t.value[0]}' en la posición {t.lexpos}")
-    t.lexer.skip(1)
+    raise Exception(f"Error léxico en la posición {t.lexpos}, línea {t.lineno}")
+    # print(f"🛑 Error léxico: Carácter inválido '{t.value[0]}' en la posición {t.lexpos}")
+    # t.lexer.skip(1)
 
 # Crear una instancia del lexer
 lexer = lex.lex()
