@@ -3,7 +3,7 @@ from googletrans import Translator
 import re
 
 # 📌 Ruta del archivo de traducción
-archivo_po = "locale/es/LC_MESSAGES/django.po"  # Ajusta según el idioma destino
+archivo_po = "locale/ru/LC_MESSAGES/django.po"  # Ajusta según el idioma destino
 
 # Cargar el archivo de traducción
 po = polib.pofile(archivo_po)
@@ -29,7 +29,7 @@ for entry in po:
             ends_with_newline = original_text.endswith("\n")
 
             # ✅ Traducir sin modificar estructura
-            translated_text = translator.translate(original_text, src="es", dest="es").text
+            translated_text = translator.translate(original_text, src="es", dest="ru").text
 
             # ✅ Reemplazar solo si la traducción afectó variables o HTML
             translated_text = translated_text.replace("\\n", "\n")

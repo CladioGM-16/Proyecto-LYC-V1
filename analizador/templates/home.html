@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página</title>
+    <title>LyCenciados Corruptos</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}" />
   </head>
@@ -13,7 +13,7 @@
     <header>
       <nav class="rectangle1">
         <a href="{% url 'about' %}" class="header-link"
-          >About (info_proyecto)</a
+          >{% translate "Documentación del proyecto" %}</a
         >
         <a
           href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
@@ -21,7 +21,7 @@
           >GitHub</a
         >
         <a href="{% url 'info_grafos' %}" class="header-link"
-          >Información de Grafos</a
+          >{% translate "Sobre los Grafos" %}</a
         >
         {% load i18n %}
             <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -38,8 +38,7 @@
                 </select>
             </form>
       </nav>
-      <p>{% translate "SOLO PARA PROBAR LA TRADUCCIÓN" %}</p>
-      {% blocktranslate %}
+      <!-- {% blocktranslate %}
       <p>
         HOLA MI NOMBRE ES JHAIR HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
         HOLAHOLA HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
@@ -48,15 +47,15 @@
         HOLA HOLA HOLA HOLA HOLA HOLA HOLA
       </p>
       <p>{{message}}</p>
-      {% endblocktranslate %}
+      {% endblocktranslate %} -->
     </header>
 
     <main>
       <div class="main-content">
         <section class="editor-container">
           <div class="buttons">
-            <button onclick="guardarTexto()">Guardar</button>
-            <button onclick="cargarTexto()">Cargar</button>
+            <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
+            <button onclick="cargarTexto()">{% translate "Cargar"  %}</button>
           </div>
 
           <div class="code-editor">
@@ -65,7 +64,7 @@
           </div>
 
           <div class="output">
-            <p>Resultado aquí...</p>
+            <p>{% translate "Resultado aquí..." %}</p>
           </div>
         </section>
 
@@ -76,7 +75,7 @@
     </main>
 
     <footer>
-      <p>Designed by LyCenciados Corruptos</p>
+      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
     </footer>
 
     <!-- JavaScript -->

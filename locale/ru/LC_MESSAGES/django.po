@@ -16,15 +16,17 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\analizador\templates\home.html:16
 msgid "Documentación del proyecto"
-msgstr "Project documentation"
+msgstr "Проектная документация"
 
 #: .\analizador\templates\home.html:24
 msgid "Sobre los Grafos"
-msgstr "About the Graphs"
+msgstr "О графиках"
 
 #: .\analizador\templates\home.html:41
 #, python-format
@@ -46,33 +48,35 @@ msgid ""
 msgstr ""
 "\n"
 "<p>\n"
-"Hello my name is Jhair Hi Hi Hi Hi Hi Hi Hi\n"
-"Hihola Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi\n"
-"Hi Hi Hihola Hi Hi Hi Hi Hi Hi Hihola Hi\n"
-"Hi Hihola Hi Hi Hi Hi Hi Hi Hihola Hi\n"
-"Hello hello hello hello hello hello\n"
-"</p>\n"
-"<p>%(message)s</p>"
+"Привет, меня зовут Джайр привет привет привет привет привет привет\n"
+"Привет, привет привет привет привет привет привет привет привет привет "
+"привет привет\n"
+"Привет, привет, привет, привет привет привет привет привет, привет, привет\n"
+"Привет, привет, привет привет привет привет привет, привет, привет\n"
+"Привет, привет привет привет привет\n"
+"      </p>\n"
+"      <p>%(message)s</p>\n"
+"      "
 
 #: .\analizador\templates\home.html:57
 msgid "Guardar"
-msgstr "Save"
+msgstr "Сохранить"
 
 #: .\analizador\templates\home.html:58
 msgid "Cargar"
-msgstr "Load"
+msgstr "Загрузить"
 
 #: .\analizador\templates\home.html:67
 msgid "Resultado aquí..."
-msgstr "Result here ..."
+msgstr "Результат здесь ..."
 
 #: .\analizador\templates\home.html:78
 msgid "Diseñada por LyCenciados Corruptos"
-msgstr "Designed by LyCenciados Corruptos"
+msgstr "Разработано LyCenciados Corruptos"
 
 #: .\analizador\views.py:7
 msgid "Bienvenido a la página principal"
-msgstr "Welcome to the main page"
+msgstr "Добро пожаловать на главную страницу"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -1297,6 +1301,3 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
-
-#~ msgid "SOLO PARA PROBAR LA TRADUCCIÓN"
-#~ msgstr "Only to prove the translation"

@@ -127,12 +127,12 @@ LANGUAGES = [
     ('es', ('Español')),
     ('en', ('Ingles')),
     # ('hi', _('Hindi')),
-    # ('fr', _('French')),
+    ('fr', ('French')),
     # ('de', _('German')),
     # ('zh', _('Chinese')),
     # ('ko', _('Korean')),
     # ('ja', _('Japanese')),
-    # ('ru', _('Russian')),
+    ('ru', ('Russian')),
     # ('it', _('Italian')),
 ]
 
