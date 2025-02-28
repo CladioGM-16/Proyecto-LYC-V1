@@ -1,4 +1,4 @@
-/* Estructura básica del cuerpo */
+/* 🟡 ESTILOS GENERALES */
 body {
     display: flex;
     flex-direction: column;
@@ -9,17 +9,17 @@ body {
     background-color: #f1e8aa;
 }
 
-/* Contenedor principal */
+/* 📌 CONTENEDOR PRINCIPAL */
 .desktop-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1; /* Permite que el contenido crezca y empuje el footer */
+    flex: 1;
     width: 100%;
-    overflow: hidden; /* Elimina cualquier scroll interno */
+    overflow: hidden;
 }
 
-/* Header */
+/* 🟡 HEADER */
 .rectangle1 {
     width: 100%;
     background-color: #f5d496;
@@ -30,7 +30,7 @@ body {
     align-items: center;
 }
 
-/* Enlaces del header */
+/* 📌 LINKS DEL HEADER */
 .header-link {
     text-decoration: none;
     color: black;
@@ -49,26 +49,26 @@ body {
     background-color: #e0c080;
 }
 
-/* Contenido Principal */
+/* 📌 CONTENIDO PRINCIPAL */
 .main-content {
     display: flex;
-    justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
+    justify-content: space-evenly;
     align-items: center;
-    width: 95%; /* Ajuste de ancho */
+    width: 95%;
     flex-grow: 1;
     margin-top: 20px;
-    padding-right: 50px; /* Mueve los cuadros un poco más a la derecha */
+    padding-right: 50px;
 }
 
-/* Contenedor del editor */
+/* 📌 EDITOR DE CÓDIGO */
 .editor-container {
     width: 60%;
     display: flex;
     flex-direction: column;
-    margin-left: 50px; /* Mueve el editor a la derecha */
+    margin-left: 50px;
 }
 
-/* Botones */
+/* 📌 BOTONES GENERALES */
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -89,7 +89,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Editor de código */
+/* 📌 ESTILOS DEL EDITOR */
 .code-editor {
     display: flex;
     border: 2px solid black;
@@ -136,21 +136,51 @@ textarea {
     overflow: auto;
 }
 
-/* Contenedor de la imagen */
+/* 📌 CONTENEDOR DE LA IMAGEN Y BOTÓN */
 .image-container {
     width: 30%;
     display: flex;
+    flex-direction: column; /* 🔥 Asegura que la imagen y el botón estén en columna */
     justify-content: center;
-    align-items: center;
-    margin-left: 50px; /* Mueve la imagen un poco a la derecha */
+    align-items: center; /* 🔥 Centra el contenido */
+    margin-left: 50px;
 }
 
-.image-container img {
+/* 📌 ESTILO DE LA IMAGEN */
+.logo-img {
     width: 100%;
+    max-width: 100%;
     border: 2px solid black;
 }
 
-/* Contenedor de la salida */
+/* 📌 BOTÓN "CREA TU GRAFO" - MÁS GRANDE Y CELESTE */
+.grafo-button {
+    background-color: #00AEEF; /* 🔵 Celeste */
+    color: white; 
+    padding: 15px 30px;  /* 🔥 Aumentamos el tamaño del botón */
+    border: none; 
+    border-radius: 8px; /* 🔹 Bordes más redondeados */
+    cursor: pointer; 
+    font-size: 20px;  /* 🔥 Fuente más grande */
+    font-weight: bold; /* 🔹 Texto en negrita */
+    margin-top: 20px; 
+    width: 90%;  /* 🔥 Botón más ancho */
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease; /* 🎨 Animación suave */
+}
+
+/* 📌 EFECTO HOVER (cuando pasas el mouse) */
+.grafo-button:hover {
+    background-color: #0096D6; /* 🔵 Azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* 🔥 Efecto de agrandado */
+}
+
+
+.grafo-button:hover {
+    background-color: #005f73; /* 🔥 Efecto hover */
+}
+
+/* 📌 CONTENEDOR DE LA SALIDA */
 .output {
     width: 97%;
     height: 150px;
@@ -165,8 +195,7 @@ textarea {
     justify-content: flex-start;
 }
 
-/* FOOTER SIEMPRE ABAJO */
-
+/* 📌 FOOTER SIEMPRE ABAJO */
 footer {
     background-color: #f0e68c;
     text-align: center;
@@ -174,10 +203,11 @@ footer {
     font-weight: bold;
     border-top: 2px solid #333;
     width: 100%;
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    margin-top: auto;
     position: relative;
 }
-/* Estilos responsivos */
+
+/* 📌 ESTILOS RESPONSIVOS */
 @media screen and (max-width: 1024px) {
     .main-content {
         flex-direction: column;

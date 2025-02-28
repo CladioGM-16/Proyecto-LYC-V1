@@ -17,10 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from analizador.views import home, about, info_grafos, idiomas
+from grafos.views import home as grafos_home
+from django.urls import path, include  
+
 
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
     path('info_grafos/', info_grafos, name='info_grafos'),
     path('idiomas/', idiomas, name='idiomas'),
+    path('admin/', admin.site.urls),
+
+    path('grafos_home/', grafos_home, name='grafos_home'),
+    path('api/', include('grafos.api.urls')),
 ]

@@ -149,7 +149,24 @@ textarea {
     width: 100%;
     border: 2px solid black;
 }
+/* 📌 Estilo del botón "Crea tu grafo" */
+.grafo-button {
+    background-color: #008CBA; /* 🔹 Celeste */
+    color: white;
+    padding: 15px 30px; /* 🔥 Tamaño adecuado */
+    font-size: 18px; /* 🔥 Tamaño de texto ajustado */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px; /* 🔹 Espaciado con la imagen */
+    text-align: center;
+    width: 100%; /* 🔹 Se ajusta al tamaño del contenedor */
+    max-width: 250px; /* 🔹 No se desborda */
+}
 
+.grafo-button:hover {
+    background-color: #0073A1;
+}
 /* Contenedor de la salida */
 .output {
     width: 97%;
