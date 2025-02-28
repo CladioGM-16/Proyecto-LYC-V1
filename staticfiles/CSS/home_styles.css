@@ -1,204 +1,209 @@
 /* Estructura básica del cuerpo */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    overflow: hidden; /* Elimina el scroll */
-    font-family: Arial, sans-serif;
-    background-color: #f1e8aa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Elimina el scroll */
+  font-family: Arial, sans-serif;
+  background-color: #000000;
 }
 
 /* Contenedor principal */
 .desktop-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1; /* Permite que el contenido crezca y empuje el footer */
-    width: 100%;
-    overflow: hidden; /* Elimina cualquier scroll interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Permite que el contenido crezca y empuje el footer */
+  width: 100%;
+  overflow: hidden; /* Elimina cualquier scroll interno */
 }
 
 /* Header */
 .rectangle1 {
-    width: 100%;
-    background-color: #f5d496;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Enlaces del header */
 .header-link {
-    text-decoration: none;
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 20px;
-    display: inline-block;
-    text-align: center;
-    width: 25%;
-    background-color: #f5d496;
-    border: 1px solid black;
-    transition: background 0.3s ease;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+  background-color: #ff0000;
+  border: 1px solid black;
+  transition: background 0.3s ease;
 }
 
 .header-link:hover {
-    background-color: #e0c080;
+  background-color: #6d4800;
+}
+
+select#language-select {
+  background-color: #ed0000;
 }
 
 /* Contenido Principal */
 .main-content {
-    display: flex;
-    justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
-    align-items: center;
-    width: 95%; /* Ajuste de ancho */
-    flex-grow: 1;
-    margin-top: 20px;
-    padding-right: 50px; /* Mueve los cuadros un poco más a la derecha */
+  display: flex;
+  justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
+  align-items: center;
+  width: 95%; /* Ajuste de ancho */
+  flex-grow: 1;
+  margin-top: 20px;
+  padding-right: 50px; /* Mueve los cuadros un poco más a la derecha */
 }
 
 /* Contenedor del editor */
 .editor-container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px; /* Mueve el editor a la derecha */
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px; /* Mueve el editor a la derecha */
 }
 
 /* Botones */
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+  padding: 10px 15px;
+  background-color: #ff0000;
+  color: rgb(9, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #008b07;
 }
 
 /* Editor de código */
 .code-editor {
-    display: flex;
-    border: 2px solid black;
-    background: #d9d9d9;
-    height: 300px;
-    width: 100%;
-    overflow: hidden;
+  display: flex;
+  border: 2px solid rgb(255, 12, 12);
+  background: #000000;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .line-numbers {
-    width: 50px;
-    padding: 5px;
-    background: #b0b0b0;
-    text-align: right;
-    font-family: monospace;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    white-space: nowrap;
-    user-select: none;
+  width: 50px;
+  padding: 5px;
+  background: #000000;
+  text-align: right;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .textarea-container {
-    flex: 1;
-    overflow: auto;
-    position: relative;
+  flex: 1;
+  overflow: auto;
+  position: relative;
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    border: none;
-    font-family: monospace;
-    font-size: 14px;
-    line-height: 20px;
-    outline: none;
-    resize: none;
-    white-space: pre;
-    word-wrap: normal;
-    overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border: none;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  resize: none;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
 }
 
 /* Contenedor de la imagen */
 .image-container {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px; /* Mueve la imagen un poco a la derecha */
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px; /* Mueve la imagen un poco a la derecha */
 }
 
 .image-container img {
-    width: 100%;
-    border: 2px solid black;
+  width: 100%;
+  border: 2px solid black;
 }
 
 /* Contenedor de la salida */
 .output {
-    width: 97%;
-    height: 150px;
-    background: #d9d9d9;
-    margin-top: 15px;
-    text-align: left;
-    padding: 15px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  width: 97%;
+  height: 150px;
+  background: #d9d9d9;
+  margin-top: 15px;
+  text-align: left;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* FOOTER SIEMPRE ABAJO */
 
 footer {
-    background-color: #f0e68c;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    border-top: 2px solid #333;
-    width: 100%;
-    margin-top: auto; /* Empuja el footer hacia abajo */
-    position: relative;
+  background-color: #f0e68c;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-top: 2px solid #333;
+  width: 100%;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  position: relative;
 }
 /* Estilos responsivos */
 @media screen and (max-width: 1024px) {
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .editor-container, .image-container {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  .editor-container,
+  .image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    .code-editor {
-        height: 250px;
-    }
+  .code-editor {
+    height: 250px;
+  }
 
-    .output {
-        width: 100%;
-    }
+  .output {
+    width: 100%;
+  }
 
-    .header-link {
-        font-size: 18px;
-        padding: 10px;
-    }
+  .header-link {
+    font-size: 18px;
+    padding: 10px;
+  }
 }

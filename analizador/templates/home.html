@@ -13,7 +13,7 @@
     <header>
       <nav class="rectangle1">
         <a href="{% url 'about' %}" class="header-link"
-          >{% translate "Documentación del proyecto" %}</a
+          >{% translate "Documentación" %}</a
         >
         <a
           href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
@@ -23,20 +23,24 @@
         <a href="{% url 'info_grafos' %}" class="header-link"
           >{% translate "Sobre los Grafos" %}</a
         >
-        {% load i18n %}
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                <input name="next" type="hidden" value="{{ request.path }}">
-                <select name="language" onchange="this.form.submit()">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for language in languages %}
-                        <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                            {{ language.name_local }} ({{ language.code }})
-                        </option>
-                    {% endfor %}
-                </select>
-            </form>
+        
+        <div class="language-container">
+          <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.path }}">
+              <select name="language" onchange="this.form.submit()" id="language-select">
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                      <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                          {{ language.name_local }} ({{ language.code }})
+                      </option>
+                  {% endfor %}
+              </select>
+          </form>
+      </div>
+      
       </nav>
       <!-- {% blocktranslate %}
       <p>
