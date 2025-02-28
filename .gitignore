@@ -1,6 +1,5 @@
 # Entorno virtual
 venv/
-
 # Archivos compilados de Python
 *.pyc
 __pycache__/
