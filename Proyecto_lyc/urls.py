@@ -19,6 +19,8 @@ from django.urls import path, include
 from analizador.views import home, about, info_grafos, idiomas
 from django.conf.urls.i18n import i18n_patterns  # ✅ Importamos i18n_patterns
 
+from grafos.views import home as grafos_home
+from django.urls import path, include  
 
 
 urlpatterns = [
@@ -26,6 +28,10 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('info_grafos/', info_grafos, name='info_grafos'),
     path('idiomas/', idiomas, name='idiomas'),
+    path('admin/', admin.site.urls),
+
+    path('grafos_home/', grafos_home, name='grafos_home'),
+    path('api/', include('grafos.api.urls')),
 ]
 
 urlpatterns += [

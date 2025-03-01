@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualización de Grafos</title>
+    <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+    <script src="{% static 'js/graph_editor.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/css1.css' %}">
+    <style>
+        #mynetwork {
+            width: 100%;
+            height: 500px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Visualización de Grafos</h1>
+
+    <button id="editModeNodesBtn" onclick="toggleEditModeNodes()">Modo Agregar Nodos</button>
+    <button id="editModeEdgesBtn" onclick="toggleEditModeEdges()">Modo Agregar Aristas</button>
+    <button id="editModeDeleteBtn" onclick="toggleEditModeDelete()">Modo Eliminar</button>
+    <button id="ejecutarDijkstra">Ejecutar Dijkstra</button>
+
+    <div id="mynetwork"></div>
+</body>
+</html>

@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LyCenciados Corruptos</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ timestamp }}">
+
+</head>
+<body>
+
     <header>
       <nav class="rectangle1">
         <a href="{% url 'about' %}" class="header-link"
@@ -67,15 +69,17 @@
             <textarea id="codeArea" spellcheck="false"></textarea>
           </div>
 
-          <div class="output">
-            <p>{% translate "Resultado aquí..." %}</p>
-          </div>
-        </section>
+            
+            <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
+            
+                <!-- Botón debajo de la imagen -->
+                <button onclick="window.location.href='/grafos_home/'" class="grafo-button">Crea tu grafo</button>
+            </aside>
+            
 
-        <aside class="image-container">
-          <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado" />
-        </aside>
-      </div>
+            
+        </div>
     </main>
 
     <footer>

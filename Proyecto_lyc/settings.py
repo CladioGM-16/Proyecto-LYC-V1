@@ -28,7 +28,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-segura-de-desarrollo')
 DEBUG = "RENDER" not in os.environ
 
 # Lista vacía de ALLOWED_HOSTS
+<<<<<<< HEAD
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+=======
+ALLOWED_HOSTS = ["localhost","127.0.0.1"]
+>>>>>>> origin/rama_cgm
 
 # Obtener el hostname de Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -46,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'analizador',
+    'grafos',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +70,10 @@ ROOT_URLCONF = 'Proyecto_lyc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'analizador/templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'analizador/templates'),
+            os.path.join(BASE_DIR, 'grafos/templates'), 
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,10 +81,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'analizador.context_processors.add_timestamp',  # <-- Agrega esta línea
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'Proyecto_lyc.wsgi.application'
 
@@ -143,13 +153,18 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
 STATIC_URL = '/Static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"analizador", "static")  
-]
+
+# Verificar si la carpeta 'Static' existe, y si es así, agregarla a STATICFILES_DIRS
+static_dir = os.path.join(BASE_DIR, "Static")
+
+if os.path.exists(static_dir):
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "analizador", "static"), static_dir]
+else:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR,"analizador", "static")]
+
 # Activar compresión y almacenamiento en caché para mejorar rendimiento en producción
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
