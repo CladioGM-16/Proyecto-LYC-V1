@@ -1,0 +1,2314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-01 19:12-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\analizador\templates\about.html:147 .\analizador\templates\base.html:15
+#: .\analizador\templates\home.html:17
+#: .\analizador\templates\info_grafos.html:262
+#: .\grafos\templates\grafos_home.html:18
+msgid "Documentación"
+msgstr "documentation"
+
+#: .\analizador\templates\about.html:155 .\analizador\templates\base.html:17
+#: .\analizador\templates\home.html:25
+#: .\analizador\templates\info_grafos.html:270
+#: .\grafos\templates\grafos_home.html:26
+msgid "Sobre los Grafos"
+msgstr "À propos des graphiques"
+
+#: .\analizador\templates\about.html:180
+msgid "Introducción"
+msgstr "Introduction"
+
+#: .\analizador\templates\about.html:182
+msgid ""
+"\n"
+"            En el desarrollo de software, los analizadores léxicos, sintácticos\n"
+"            y semánticos juegan un papel esencial en la interpretación y\n"
+"            validación de código fuente. Estos componentes garantizan que los\n"
+"            programas sean comprensibles y funcionales al detectar errores antes\n"
+"            de la ejecución, lo que evita problemas que podrían impedir la\n"
+"            correcta lectura o ejecución de instrucciones.\n"
+"            "
+msgstr ""
+"\n"
+"Dans le développement de logiciels, les analyseurs lexicaux et syntaxiques\n"
+"et la sémantique joue un rôle essentiel dans l'interprétation et\n"
+"Validation du code source.Ces composants garantissent que\n"
+"Les programmes sont compréhensibles et fonctionnels lors de la détection des erreurs avant\n"
+"d'exécution, qui évite les problèmes qui pourraient empêcher\n"
+"Lecture correcte ou exécution des instructions."
+
+#: .\analizador\templates\about.html:193
+msgid ""
+"\n"
+"            El análisis léxico transforma el código en tokens, el análisis\n"
+"            sintáctico verifica la estructura del lenguaje, y el análisis\n"
+"            semántico asegura que las expresiones tengan sentido dentro del\n"
+"            contexto del programa. Estas técnicas son ampliamente utilizadas en\n"
+"            compiladores, intérpretes y herramientas de validación de código\n"
+"            para lenguajes de programación bien establecidos, como los\n"
+"            utilizados en bases de datos, procesamiento de números y otros\n"
+"            dominios tradicionales.\n"
+"            "
+msgstr ""
+"\n"
+"L'analyse lexicale transforme le code en jetons, l'analyse\n"
+"Syntaxtique vérifie la structure du langage et l'analyse\n"
+"sémantique garantit que les expressions ont du sens dans le\n"
+"Contexte du programme.Ces techniques sont largement utilisées dans\n"
+"Compilateurs, interprètes et outils de validation du code\n"
+"Pour des langages de programmation bien établis, tels que\n"
+"utilisé dans les bases de données, le traitement des nombres et autres\n"
+"Domaines traditionnels."
+
+#: .\analizador\templates\about.html:205
+msgid ""
+"\n"
+"            Sin embargo, cuando se trata de grafos, el desarrollo de\n"
+"            herramientas especializadas para analizar su representación formal\n"
+"            es menos común. A pesar de su importancia en múltiples disciplinas,\n"
+"            como la teoría de redes, la optimización y la inteligencia\n"
+"            artificial, la validación automática de gramáticas para grafos sigue\n"
+"            siendo un área poco explorada. Este proyecto tiene como objetivo\n"
+"            diseñar una gramática específica para la representación de grafos y\n"
+"            desarrollar analizadores léxicos, sintácticos y semánticos que\n"
+"            validen su correcta escritura y estructura. Al hacerlo, se busca\n"
+"            ofrecer una solución innovadora que permita una validación precisa\n"
+"            de grafos en diversos contextos, facilitando su interpretación y uso\n"
+"            en aplicaciones computacionales.\n"
+"            "
+msgstr ""
+"\n"
+"Cependant, en ce qui concerne les graphiques, le développement de\n"
+"Outils spécialisés pour analyser votre représentation formelle\n"
+"C'est moins courant.Malgré son importance dans plusieurs disciplines,\n"
+"comme les réseaux, l'optimisation et l'intelligence\n"
+"La validation graphique artificielle et automatique des graphiques suit\n"
+"Être un peu exploré.Ce projet vise\n"
+"Concevoir une grammaire spécifique pour la représentation des graphiques et\n"
+"développer des analyseurs lexicaux, syntaxtiques et sémantiques qui\n"
+"Ils valident leur écriture et leur structure correctes.Ce faisant, il cherche\n"
+"Offrez une solution innovante qui permet une validation précise\n"
+"de graphiques dans divers contextes, facilitant son interprétation et son utilisation\n"
+"Dans les applications de calcul."
+
+#: .\analizador\templates\about.html:230
+msgid "Objetivos"
+msgstr "Objectifs"
+
+#: .\analizador\templates\about.html:231
+msgid "Objetivo General"
+msgstr "Objectif général"
+
+#: .\analizador\templates\about.html:233
+msgid ""
+"\n"
+"            Desarrollar un analizador para la validación de estructuras de\n"
+"            grafos, permitiendo la detección de errores en su definición y\n"
+"            representación.\n"
+"            "
+msgstr ""
+"\n"
+"Développer un analyseur pour la validation des structures de\n"
+"graphiques, permettant la détection d'erreurs dans sa définition et\n"
+"représentation."
+
+#: .\analizador\templates\about.html:239
+msgid "Objetivos Específicos"
+msgstr "Objectifs spécifiques"
+
+#: .\analizador\templates\about.html:242
+msgid ""
+"\n"
+"              Diseñar una gramática formal para la definición de grafos,\n"
+"              incluyendo palabras reservadas, identificadores, números y\n"
+"              símbolos especiales.\n"
+"              "
+msgstr ""
+"\n"
+"Concevoir une grammaire formelle pour la définition des graphiques,\n"
+"y compris les mots réservés, les identifiants, les chiffres et\n"
+"Symboles spéciaux."
+
+#: .\analizador\templates\about.html:249
+msgid ""
+"\n"
+"              Implementar un analizador léxico que identifique y clasifique los\n"
+"              tokens de entrada.\n"
+"              "
+msgstr ""
+"\n"
+"Mettre en œuvre un analyseur lexical qui identifie et classe le\n"
+"Jetons d'entrée."
+
+#: .\analizador\templates\about.html:255
+msgid ""
+"\n"
+"              Desarrollar un analizador sintáctico que valide la correcta\n"
+"              estructura de los grafos según las reglas definidas en la\n"
+"              gramática.\n"
+"              "
+msgstr ""
+"\n"
+"Développer un analyseur syntaxique qui valide le bon\n"
+"Structure du graphique selon les règles définies dans le\n"
+"grammaire."
+
+#: .\analizador\templates\about.html:262
+msgid ""
+"\n"
+"              Incorporar un análisis semántico que verifique la coherencia de la\n"
+"              información representada en los grafos.\n"
+"              "
+msgstr ""
+"\n"
+"Incorporer une analyse sémantique qui vérifie la cohérence du\n"
+"Informations représentées dans les graphiques."
+
+#: .\analizador\templates\about.html:267
+msgid "Crear un prototipo de interfaz en herramientas de diseño."
+msgstr "Créez un prototype d'interface dans les outils de conception."
+
+#: .\analizador\templates\about.html:279
+msgid "Marco Teórico"
+msgstr "Cadre théorique"
+
+#: .\analizador\templates\about.html:285
+msgid "Compilador"
+msgstr "Compilateur"
+
+#: .\analizador\templates\about.html:287 .\analizador\templates\about.html:363
+#: .\analizador\templates\about.html:383
+msgid ""
+"\n"
+"            Un compilador es un programa que traduce código fuente escrito en un\n"
+"            lenguaje de alto nivel a un lenguaje de bajo nivel, como el código\n"
+"            de máquina. Este proceso ocurre antes de la ejecución, permitiendo\n"
+"            que el programa se ejecute de manera independiente sin necesidad del\n"
+"            código original.\n"
+"            "
+msgstr ""
+"\n"
+"Un compilateur est un programme qui traduit le code source écrit dans un\n"
+"Langue de haut niveau à un langage de niveau bas, comme le code\n"
+"Machine.Ce processus se produit avant l'exécution, permettant\n"
+"que le programme est exécuté indépendamment sans avoir besoin de\n"
+"code d'origine."
+
+#: .\analizador\templates\about.html:297
+msgid "Intérprete"
+msgstr "Interprète"
+
+#: .\analizador\templates\about.html:299
+msgid ""
+"\n"
+"            Un intérprete es un programa que ejecuta código fuente línea por\n"
+"            línea sin generar un archivo ejecutable. Esto facilita la depuración\n"
+"            y permite una ejecución interactiva, aunque puede ser más lento que\n"
+"            un compilador. Lenguajes como Python y JavaScript utilizan\n"
+"            intérpretes para ejecutar sus programas.\n"
+"            "
+msgstr ""
+"\n"
+"Un interprète est un programme qui exécute la ligne de code de ligne par\n"
+"Ligne sans générer un fichier exécutable.Cela facilite la purification\n"
+"et permet une exécution interactive, bien qu'elle puisse être plus lente que\n"
+"Un compilateur.Des langues comme Python et JavaScript utilisent\n"
+"Interprètes pour exécuter leurs programmes."
+
+#: .\analizador\templates\about.html:309
+msgid "Lenguaje Formal"
+msgstr "Langue formelle"
+
+#: .\analizador\templates\about.html:311
+msgid ""
+"\n"
+"            Un lenguaje formal es un conjunto de cadenas de símbolos definidos\n"
+"            por reglas precisas, utilizadas en lógica, matemáticas y\n"
+"            computación. Se emplea en el diseño de lenguajes de programación y\n"
+"            protocolos de comunicación, garantizando estructuras bien definidas\n"
+"            y comprensibles por máquinas y humanos.\n"
+"            "
+msgstr ""
+"\n"
+"Une langue formelle est un ensemble de chaînes de symboles définis\n"
+"par des règles précises, utilisées dans la logique, les mathématiques et\n"
+"calcul.Il est utilisé dans la conception des langages de programmation et\n"
+"Protocoles de communication, garantissant des structures bien définies\n"
+"et compréhensible par les machines et les humains."
+
+#: .\analizador\templates\about.html:321
+msgid "Gramática"
+msgstr "Grammaire"
+
+#: .\analizador\templates\about.html:323
+msgid ""
+"\n"
+"            Una gramática es un conjunto de reglas que describen cómo se pueden\n"
+"            formar expresiones válidas en un lenguaje formal. Se usa en la\n"
+"            construcción de lenguajes de programación y define la estructura\n"
+"            correcta de las instrucciones que el compilador o intérprete debe\n"
+"            procesar.\n"
+"            "
+msgstr ""
+"\n"
+"Une grammaire est un ensemble de règles qui décrivent comment\n"
+"forment des expressions valides dans un langage formel.Il est utilisé dans le\n"
+"Construction de langages de programmation et définit la structure\n"
+"Correction des instructions que le compilateur ou l'interprète doit\n"
+"processus."
+
+#: .\analizador\templates\about.html:335
+msgid "Frameworks y Herramientas"
+msgstr "Frameworks et outils"
+
+#: .\analizador\templates\about.html:342
+msgid ""
+"\n"
+"            Django es un framework web de código abierto basado en Python,\n"
+"            diseñado para facilitar el desarrollo rápido de aplicaciones web\n"
+"            seguras y escalables. Utiliza el patrón Modelo-Vista-Controlador\n"
+"            (MVC). Proporciona herramientas para la gestión de bases de datos,\n"
+"            autenticación de usuarios y generación de interfaces de\n"
+"            administración, entre otras funcionalidades.\n"
+"            "
+msgstr ""
+"\n"
+"Django est un site Web open source basé sur Python,\n"
+"Conçu pour faciliter le développement rapide des applications Web\n"
+"sûr et évolutif.Utilisez le modèle Model-Vista-contrôleur\n"
+"(MVC).Fournit des outils pour la gestion des bases de données,\n"
+"Authentification des utilisateurs et génération d'interface de\n"
+"Administration, entre autres fonctionnalités."
+
+#: .\analizador\templates\about.html:401
+msgid "Análisis Léxico"
+msgstr "Analyse lexicale"
+
+#: .\analizador\templates\about.html:403
+msgid ""
+"\n"
+"            El análisis léxico es la primera fase en el proceso de compilación o\n"
+"            interpretación de un programa, encargándose de transformar el código\n"
+"            fuente en una secuencia de unidades mínimas de significado llamadas\n"
+"            tokens. Durante esta fase, el analizador léxico escanea el código,\n"
+"            eliminando espacios en blanco y comentarios, y categorizando cada\n"
+"            elemento en su respectivo tipo de token\n"
+"            "
+msgstr ""
+"\n"
+"L'analyse lexicale est la première phase du processus de compilation ou\n"
+"Interprétation d'un programme, en prenant soin de transformer le code\n"
+"source dans une séquence d'unités de sens minimum appelées\n"
+"JetonsAu cours de cette phase, l'analyseur lexical scanne le code,\n"
+"éliminer les espaces et commentaires vierges, et catégoriser chacun\n"
+"élément dans son type de jeton respectif"
+
+#: .\analizador\templates\about.html:412 .\analizador\templates\about.html:453
+msgid "Token"
+msgstr "Jeton"
+
+#: .\analizador\templates\about.html:414
+msgid ""
+"\n"
+"            Un token es la unidad léxica más pequeña con significado dentro de\n"
+"            un lenguaje de programación. Cada línea de código está compuesta por\n"
+"            varios tokens, que pueden representar palabras reservadas,\n"
+"            identificadores, operadores, números o símbolos especiales.\n"
+"            "
+msgstr ""
+"\n"
+"Un jeton est la plus petite unité lexicale avec sens à l'intérieur\n"
+"Un langage de programmation.Chaque ligne de code est composée de\n"
+"plusieurs jetons, qui peuvent représenter les mots réservés,\n"
+"Identificateurs, opérateurs, chiffres ou symboles spéciaux."
+
+#: .\analizador\templates\about.html:423
+msgid ""
+"\n"
+"              <b>Palabra reservada:</b> Son términos predefinidos en un lenguaje\n"
+"              de programación y suelen ser palabras reservadas, lo que significa\n"
+"              que no pueden usarse como identificadores.\n"
+"              "
+msgstr ""
+"\n"
+"<b> Mot réservé: </b> sont des termes prédéfinis dans une langue\n"
+"de programmation et sont généralement des mots réservés, ce qui signifie\n"
+"qui ne peut pas être utilisé comme identificateurs."
+
+#: .\analizador\templates\about.html:430
+msgid ""
+"\n"
+"              <b>Identificador:</b> Es el nombre que se le asigna a variables,\n"
+"              funciones, clases, objetos o cualquier entidad definida por el\n"
+"              usuario en un lenguaje de programación.\n"
+"              "
+msgstr ""
+"\n"
+"<b> identifiant: </b> est le nom attribué aux variables,\n"
+"fonctions, classes, objets ou toute entité définie par le\n"
+"Utilisateur dans un langage de programmation."
+
+#: .\analizador\templates\about.html:437
+msgid ""
+" \n"
+"              <b>Números:</b> Representan valores numéricos que pueden ser\n"
+"              utilizados en cálculos matemáticos y asignaciones de valores.\n"
+"              "
+msgstr ""
+" \n"
+"<b> nombres: </b> représentent des valeurs numériques qui peuvent être\n"
+"Utilisé dans les calculs mathématiques et les affectations de valeurs mobilières."
+
+#: .\analizador\templates\about.html:443
+msgid ""
+"\n"
+"              <b>Símbolos especiales:</b> Son caracteres que cumplen funciones\n"
+"              específicas dentro del lenguaje, como separadores, delimitadores o\n"
+"              terminadores de expresiones\n"
+"              "
+msgstr ""
+"\n"
+"<b> Symboles spéciaux: </b> sont des caractères qui remplissent les fonctions\n"
+"spécifique dans le langage, comme les séparateurs, les délimiteurs ou\n"
+"Terminateurs d'expression"
+
+#: .\analizador\templates\about.html:454
+msgid "Observación"
+msgstr "Observation"
+
+#: .\analizador\templates\about.html:458 .\analizador\templates\about.html:474
+#: .\analizador\templates\about.html:478 .\analizador\templates\about.html:490
+#: .\analizador\templates\about.html:494 .\analizador\templates\about.html:498
+msgid "Palabra reservada"
+msgstr "Mot réservé"
+
+#: .\analizador\templates\about.html:461
+msgid "Nombre de nodo"
+msgstr "Nom de nœud"
+
+#: .\analizador\templates\about.html:462
+msgid "Identificador"
+msgstr "Identifiant"
+
+#: .\analizador\templates\about.html:465
+msgid "Números enteros positivos"
+msgstr "Nombres entiers positifs"
+
+#: .\analizador\templates\about.html:466
+msgid "Números"
+msgstr "Nombres"
+
+#: .\analizador\templates\about.html:470 .\analizador\templates\about.html:482
+#: .\analizador\templates\about.html:486 .\analizador\templates\about.html:502
+msgid "Símbolos especiales"
+msgstr "Symboles spéciaux"
+
+#: .\analizador\templates\about.html:508
+msgid "Análisis Sintáctico"
+msgstr "Analyse syntaxique"
+
+#: .\analizador\templates\about.html:510
+msgid ""
+"\n"
+"            El análisis sintáctico es la fase de un compilador o intérprete que\n"
+"            verifica si una secuencia de tokens cumple con las reglas\n"
+"            gramaticales de un lenguaje de programación. Se basa en gramáticas\n"
+"            libres de contexto y suele representarse mediante árboles de\n"
+"            derivación o autómatas de pila. Su objetivo es estructurar\n"
+"            correctamente la entrada para que pueda ser interpretada o ejecutada\n"
+"            sin errores.\n"
+"            "
+msgstr ""
+"\n"
+"L'analyse syntaxique est la phase d'un compilateur ou d'un interprète qui\n"
+"Vérifiez si une séquence de jetons répond aux règles\n"
+"Grammaticaux d'un langage de programmation.Il est basé sur des grammaires\n"
+"sans contexte et est généralement représenté par des arbres de\n"
+"Dérivation de pilage ou automates.Son objectif est de structurer\n"
+"Entrée correcte afin qu'il puisse être interprété ou exécuté\n"
+"Pas d'erreurs."
+
+#: .\analizador\templates\about.html:520
+msgid "Autómata a Pila"
+msgstr "Pila Automate"
+
+#: .\analizador\templates\about.html:522
+msgid ""
+"\n"
+"            Un autómata de pila es un modelo computacional que extiende los\n"
+"            autómatas finitos al incorporar una pila, permitiéndole reconocer\n"
+"            gramáticas más complejas, como las libres de contexto.\n"
+"            "
+msgstr ""
+"\n"
+"Une automate à batterie est un modèle de calcul qui étend\n"
+"automates finis lors de l'intégration d'une batterie, vous permettant de reconnaître\n"
+"Des grammaires plus complexes, comme le contexte sans contexte."
+
+#: .\analizador\templates\about.html:530
+msgid ""
+" \n"
+"              <b>Estados:</b> Representan las distintas fases del procesamiento\n"
+"              de la entrada.\n"
+"              "
+msgstr ""
+"<b> États: </b> représentent les différentes phases de traitement\n"
+"de l'entrée."
+
+#: .\analizador\templates\about.html:536
+msgid ""
+"\n"
+"              <b>Transiciones:</b> Indican cómo cambia el autómata de un estado\n"
+"              a otro en función de un símbolo de entrada.\n"
+"              "
+msgstr ""
+"\n"
+"<b> Transitions: </b> Indiquez comment l'automate d'un état change\n"
+"à un autre selon un symbole d'entrée."
+
+#: .\analizador\templates\about.html:542
+msgid ""
+"\n"
+"              <b>Pila:</b> Estructura de datos que sigue el principio LIFO (Last\n"
+"              In, First Out), lo que significa que el último elemento en entrar\n"
+"              es el primero en salir.\n"
+"              "
+msgstr ""
+"\n"
+"<b> Batterie: </b> Structure de données qui suit le principe LIFO (dernier\n"
+"Dans, premier sorti), ce qui signifie que le dernier élément à entrer\n"
+"C'est le premier à partir."
+
+#: .\analizador\templates\about.html:559 .\analizador\templates\base.html:45
+#: .\analizador\templates\home.html:84
+#: .\analizador\templates\info_grafos.html:735
+#: .\grafos\templates\grafos_home.html:66
+msgid "Diseñada por LyCenciados Corruptos"
+msgstr "Conçu par LyCenciados Corruptos"
+
+#: .\analizador\templates\home.html:46
+#: .\analizador\templates\info_grafos.html:291
+#, python-format
+msgid ""
+"\n"
+"      <p>\n"
+"        HOLA MI NOMBRE ES JHAIR HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA\n"
+"        HOLAHOLA HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA\n"
+"        HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA\n"
+"        HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA HOLA\n"
+"        HOLA HOLA HOLA HOLA HOLA HOLA HOLA\n"
+"      </p>\n"
+"      <p>%(message)s</p>\n"
+"      "
+msgstr ""
+"\n"
+"      <p>\n"
+"Bonjour mon nom est jhair salut salut salut salut salut salut\n"
+"Hihola salut salut salut salut salut salut salut salut salut salut salut salut salut\n"
+"Salut salut hihola salut salut salut salut salut hihola salut\n"
+"Salut hihola salut salut salut salut salut hihola salut\n"
+"Bonjour bonjour bonjour bonjour bonjour bonjour\n"
+"      </p>\n"
+"      <p>%(message)s</p>\n"
+"      "
+
+#: .\analizador\templates\home.html:61
+msgid "Guardar"
+msgstr "Sauvegarder"
+
+#: .\analizador\templates\home.html:62
+msgid "Cargar"
+msgstr "Charger"
+
+#: .\analizador\templates\home.html:79
+msgid "Resultado aquí..."
+msgstr "Résultat ici ..."
+
+#: .\analizador\templates\info_grafos.html:306
+msgid "TEORIA DE GRAFOS"
+msgstr "Théorie des graphiques"
+
+#: .\analizador\templates\info_grafos.html:310
+msgid "Definición"
+msgstr "Définition"
+
+#: .\analizador\templates\info_grafos.html:312
+msgid ""
+" \n"
+"              Un grafo es una estructura matemática que representa relaciones\n"
+"              entre un conjunto de objetos. Se define formalmente como un par\n"
+"              ordenado:\n"
+"              "
+msgstr ""
+" \n"
+"Un graphique est une structure mathématique qui représente les relations\n"
+"Entre un ensemble d'objets.Est officiellement défini comme un couple\n"
+"rangé:"
+
+#: .\analizador\templates\info_grafos.html:319
+msgid "Donde:"
+msgstr "Où:"
+
+#: .\analizador\templates\info_grafos.html:321
+msgid "es un conjunto finito de vértices o nodos."
+msgstr "Il s'agit d'un ensemble fini de sommets ou de nœuds."
+
+#: .\analizador\templates\info_grafos.html:323
+msgid ""
+"\n"
+"                E es un conjunto de aristas o edges, que conectan pares de\n"
+"                vértices.\n"
+"                "
+msgstr ""
+"\n"
+"E est un ensemble de bords ou de bords, qui connectent les paires de\n"
+"Sommets"
+
+#: .\analizador\templates\info_grafos.html:330
+msgid ""
+"\n"
+"              <strong>Vecindad:</strong> Dos nodos son adyacentes si existe una\n"
+"              arista que los une.\n"
+"              "
+msgstr ""
+"\n"
+"<strong> quartier: </strong> Deux nœuds sont adjacents s'il y a un\n"
+"Edge qui les unit."
+
+#: .\analizador\templates\info_grafos.html:336
+msgid ""
+"\n"
+"              <strong>Distancia:</strong> La distancia entre dos nodos u y v es\n"
+"              la mínima cantidad de ejes por los que debo moverme para llegar de\n"
+"              u a v.\n"
+"              "
+msgstr ""
+"\n"
+"<strong> Distance: </strong> La distance entre deux nœuds U et V est\n"
+"la quantité minimale d'axes dont je dois déplacer pour arriver\n"
+"u a v."
+
+#: .\analizador\templates\info_grafos.html:347
+msgid "Historia de la Teoría de Grafos"
+msgstr "Histoire de la théorie des graphiques"
+
+#: .\analizador\templates\info_grafos.html:349
+msgid ""
+"\n"
+"              El origen de la teoría de grafos se remonta al siglo XVIII con el\n"
+"              problema de los puentes de Königsberg, planteado por\n"
+"              <strong>Leonhard Euler en 1736</strong>. Euler demostró que no\n"
+"              existía un camino que recorriera todos los puentes sin repetirlos,\n"
+"              sentando así las bases de la teoría de grafos y la topología.\n"
+"              "
+msgstr ""
+"\n"
+"L'origine de la théorie des graphiques remonte au XVIIIe siècle avec le\n"
+"Problème de ponts Königsberg, soulevé par\n"
+"<strong> Leonhard Euler en 1736 </strong>.Euler n'a montré pas\n"
+"Il y avait un chemin qui a tourné tous les ponts sans les répéter,\n"
+"Posant ainsi la base de la théorie des graphiques et de la topologie."
+
+#: .\analizador\templates\info_grafos.html:362
+msgid ""
+"\n"
+"              En <strong>1847, Gustav Kirchhoff</strong> aplicó la teoría de\n"
+"              grafos en circuitos eléctricos, formulando las leyes de Kirchhoff.\n"
+"              "
+msgstr ""
+"\n"
+"Dans <strong> 1847, Gustav Kirchhoff </strong> a appliqué la théorie de\n"
+"Graphiques dans les circuits électriques, formulant les lois de Kirchhoff."
+
+#: .\analizador\templates\info_grafos.html:372
+msgid ""
+"\n"
+"              En <strong>1852, Francis Guthrie</strong> propuso el problema de\n"
+"              los cuatro colores, resuelto en <strong>1976</strong>. En\n"
+"              <strong>1857, Arthur Cayley</strong> utilizó los grafos para\n"
+"              contar isómeros químicos.\n"
+"              "
+msgstr ""
+"\n"
+"En <Strong> 1852, Francis Guthrie </strong> a proposé le problème de\n"
+"Les quatre couleurs, résolues en <strong> 1976 </strong>.Dans\n"
+"<strong> 1857, Arthur Cayley </strong> a utilisé des graphiques pour\n"
+"compter les isomères chimiques."
+
+#: .\analizador\templates\info_grafos.html:380
+msgid ""
+"\n"
+"              El primer libro sobre teoría de grafos fue escrito por\n"
+"              <strong>Dénes Kőnig</strong> en <strong>1936</strong>.\n"
+"              "
+msgstr ""
+"\n"
+"Le premier livre sur la théorie des graphiques a été écrit par\n"
+"<strong> kőnig </strong> dans <strong> 1936 </strong>."
+
+#: .\analizador\templates\info_grafos.html:386
+msgid ""
+"\n"
+"              Desde la década de <strong>1950</strong>, los grafos se han usado\n"
+"              ampliamente en sociometría y redes sociales, permitiendo analizar\n"
+"              relaciones entre personas y estructuras organizacionales.\n"
+"              "
+msgstr ""
+"\n"
+"Depuis la décennie <strong> 1950 </strong>, des graphiques ont été utilisés\n"
+"largement dans la sociométrie et les réseaux sociaux, permettant l'analyse\n"
+"relations entre les personnes et les structures organisationnelles."
+
+#: .\analizador\templates\info_grafos.html:398
+msgid "TIPOS DE GRAFOS"
+msgstr "Types de graphiques"
+
+#: .\analizador\templates\info_grafos.html:404
+msgid "Grafo Simple"
+msgstr "Graphique simple"
+
+#: .\analizador\templates\info_grafos.html:406
+msgid "No tiene lazos ni múltiples aristas entre los mismos vértices."
+msgstr "Il n'a pas de liens ou de bords multiples entre les mêmes sommets."
+
+#: .\analizador\templates\info_grafos.html:415
+msgid "Multigrafo"
+msgstr "Multigraphe"
+
+#: .\analizador\templates\info_grafos.html:416
+msgid "Permite múltiples aristas entre dos vértices."
+msgstr "Il permet plusieurs bords entre deux sommets."
+
+#: .\analizador\templates\info_grafos.html:424
+msgid "Grafo Dirigido"
+msgstr "Graphique dirigé"
+
+#: .\analizador\templates\info_grafos.html:426
+msgid ""
+"\n"
+"              Las aristas tienen una dirección específica representada con\n"
+"              flechas.\n"
+"              "
+msgstr ""
+"\n"
+"Les bords ont une direction spécifique représentée avec\n"
+"flèches"
+
+#: .\analizador\templates\info_grafos.html:438
+msgid "Grafo Ponderado"
+msgstr "Graphique pondéré"
+
+#: .\analizador\templates\info_grafos.html:439
+msgid "Las aristas tienen un peso o valor numérico."
+msgstr "Les bords ont un poids ou une valeur numérique."
+
+#: .\analizador\templates\info_grafos.html:447
+msgid "Grafo Conexo"
+msgstr "Graphique risqué"
+
+#: .\analizador\templates\info_grafos.html:448
+msgid "Existe un camino entre cualquier par de vértices."
+msgstr "Il existe un chemin entre n'importe quelle paire de sommets."
+
+#: .\analizador\templates\info_grafos.html:458
+msgid "REPRESENTACIÓN DE GRAFOS"
+msgstr "Représentation de graphique"
+
+#: .\analizador\templates\info_grafos.html:460
+msgid ""
+"\n"
+"          Los grafos pueden representarse de diversas maneras en la informática\n"
+"          y la teoría de grafos. Las dos formas más comunes son matriz de\n"
+"          adyacencia y lista de adyacencia. Cada una tiene sus ventajas y\n"
+"          desventajas dependiendo del tipo de grafo y del problema que se quiera\n"
+"          resolver.\n"
+"          "
+msgstr ""
+"\n"
+"Les graphiques peuvent être représentés de diverses manières en informatique\n"
+"et la théorie des graphiques.Les deux formes les plus courantes sont la matrice de\n"
+"Adjacencia et Adjacencia.Chacun a ses avantages et\n"
+"Inconvénients en fonction du type de graphique et du problème que vous souhaitez\n"
+"résoudre."
+
+#: .\analizador\templates\info_grafos.html:468
+msgid "Matriz de Adyacencia"
+msgstr "Matrice adjacencia"
+
+#: .\analizador\templates\info_grafos.html:470
+msgid ""
+"\n"
+"          Es una matriz cuadrada de tamaño N×N (donde N es el número de\n"
+"          vértices) en la que cada celda indica si hay una arista entre dos\n"
+"          vértices.\n"
+"          "
+msgstr ""
+"\n"
+"C'est une matrice carrée de la taille N × N (où N est le nombre de\n"
+"sommets) dans lequel chaque cellule indique s'il y a un bord entre deux\n"
+"Sommets"
+
+#: .\analizador\templates\info_grafos.html:478
+msgid ""
+"\n"
+"            Si en la posición (i,j) hay un 1, significa que existe una conexión\n"
+"            entre el nodo i y el nodo j.\n"
+"            "
+msgstr ""
+"\n"
+"Si en position (i, j) il y a un 1, cela signifie qu'il y a une connexion\n"
+"entre le nœud I et le nœud."
+
+#: .\analizador\templates\info_grafos.html:483
+msgid "Si hay un 0, significa que no existe tal conexión."
+msgstr "S'il y a un 0, cela signifie qu'il n'y a pas une telle connexion."
+
+#: .\analizador\templates\info_grafos.html:492
+msgid "Lista de Adyacencias"
+msgstr "Liste adjacée"
+
+#: .\analizador\templates\info_grafos.html:494
+msgid ""
+"\n"
+"          La lista de adyacencia es una representación de un grafo en la que\n"
+"          cada nodo tiene asociado un conjunto (o lista) de nodos adyacentes, es\n"
+"          decir, aquellos con los que tiene una conexión directa mediante una\n"
+"          arista.\n"
+"          "
+msgstr ""
+"\n"
+"La liste Adjacencia est une représentation d'un graphique dans lequel\n"
+"Chaque nœud a associé un ensemble (ou une liste) de nœuds adjacents, il est\n"
+"disons, ceux avec qui il a une connexion directe à travers un\n"
+"bord."
+
+#: .\analizador\templates\info_grafos.html:501
+msgid "En esta estructura:"
+msgstr "Dans cette structure:"
+
+#: .\analizador\templates\info_grafos.html:504
+msgid ""
+"\n"
+"            Se utiliza un array o diccionario, donde cada índice o clave\n"
+"            representa un nodo.\n"
+"            "
+msgstr ""
+"\n"
+"Un tableau ou un dictionnaire est utilisé, où chaque index ou clé\n"
+"Il représente un nœud."
+
+#: .\analizador\templates\info_grafos.html:510
+msgid ""
+"\n"
+"            Cada entrada contiene una lista con los nodos a los que está\n"
+"            conectado.\n"
+"            "
+msgstr ""
+"\n"
+"Chaque entrée contient une liste avec les nœuds auxquels il est\n"
+"connecté."
+
+#: .\analizador\templates\info_grafos.html:526
+msgid "ALGORITMO DE"
+msgstr "Algorithme"
+
+#: .\analizador\templates\info_grafos.html:530
+msgid ""
+"\n"
+"              El algoritmo de Dijkstra es un método eficiente para encontrar el\n"
+"              camino más corto desde un nodo de origen a todos los demás nodos\n"
+"              en un grafo ponderado, siempre que los pesos de las aristas sean\n"
+"              no negativos. Fue desarrollado en 1956 por el científico\n"
+"              informático Edsger W. Dijkstra y se ha convertido en una\n"
+"              herramienta fundamental en teoría de grafos y optimización de\n"
+"              rutas.\n"
+"              "
+msgstr ""
+"\n"
+"L'algorithme Dijkstra est une méthode efficace pour trouver le\n"
+"chemin plus court d'un nœud d'origine à tous les autres nœuds\n"
+"Dans un graphique pondéré, à condition que les poids des bords soient\n"
+"non négatif.Il a été développé en 1956 par le scientifique\n"
+"EDSger ordinateur W. Dijkstra et est devenu un\n"
+"Outil fondamental dans la théorie des graphiques et l'optimisation de\n"
+"Itinéraires"
+
+#: .\analizador\templates\info_grafos.html:540
+msgid "Pasos del Algoritmo"
+msgstr "Étapes de l'algorithme"
+
+#: .\analizador\templates\info_grafos.html:543
+msgid "Inicialización:"
+msgstr "Initialisation:"
+
+#: .\analizador\templates\info_grafos.html:545
+msgid ""
+"\n"
+"                  Se establece la distancia del nodo origen en 0 y la de los\n"
+"                  demás nodos en infinito. Se usa una cola de prioridad para\n"
+"                  procesar los nodos con menor distancia conocida.\n"
+"                  "
+msgstr ""
+"\n"
+"La distance de l'origine du nœud en 0 et celle du\n"
+"Autres nœuds dans l'infini.Une queue prioritaire est utilisée pour\n"
+"Traitez les nœuds avec une distance moins connue."
+
+#: .\analizador\templates\info_grafos.html:555
+msgid ""
+"\n"
+"                  Se extrae el nodo con la menor distancia acumulada de la cola.\n"
+"                  Se recorren sus vecinos y, si se encuentra una ruta más corta\n"
+"                  hacia ellos, se actualiza su distancia. Se inserta nuevamente\n"
+"                  en la cola de prioridad si su distancia cambia.\n"
+"                  "
+msgstr ""
+"\n"
+"Le nœud est extrait avec la distance accumulée la plus basse de la queue.\n"
+"Leurs voisins sont voyagés et, si un itinéraire plus court est situé\n"
+"Vers eux, leur distance est mise à jour.Il est à nouveau inséré\n"
+"Dans la queue prioritaire si votre distance change."
+
+#: .\analizador\templates\info_grafos.html:564
+msgid "Finalización:"
+msgstr "Fin:"
+
+#: .\analizador\templates\info_grafos.html:566
+msgid ""
+"\n"
+"                  El algoritmo se detiene cuando todos los nodos han sido\n"
+"                  procesados o cuando se alcanza un nodo destino específico (si\n"
+"                  se busca solo un camino mínimo en particular). Se puede\n"
+"                  reconstruir el camino más corto almacenando los predecesores\n"
+"                  de cada nodo.\n"
+"                  "
+msgstr ""
+"\n"
+"L'algorithme s'arrête lorsque tous les nœuds ont été\n"
+"traité ou lorsqu'un nœud de destination spécifique est atteint (si\n"
+"Seul un chemin minimum particulier est recherché).Peut\n"
+"reconstruire le chemin le plus court stockant les prédécesseurs\n"
+"de chaque nœud."
+
+#: .\analizador\templates\info_grafos.html:582
+msgid "Complejidad Computacional"
+msgstr "Complexité informatique"
+
+#: .\analizador\templates\info_grafos.html:584
+msgid ""
+"\n"
+"              La complejidad del algoritmo depende de la estructura de datos\n"
+"              utilizada para manejar la cola de prioridad:\n"
+"              "
+msgstr ""
+"\n"
+"La complexité de l'algorithme dépend de la structure de données\n"
+"Utilisé pour gérer la queue prioritaire:"
+
+#: .\analizador\templates\info_grafos.html:590
+msgid "Usando una matriz de adyacencia:"
+msgstr "Utilisation d'une matrice adjacencia:"
+
+#: .\analizador\templates\info_grafos.html:591
+msgid "Usando un heap binario:"
+msgstr "Utilisation d'un tas binaire:"
+
+#: .\analizador\templates\info_grafos.html:592
+msgid "Usando un Fibonacci Heap: "
+msgstr "Utilisation d'un tas Fibonacci:"
+
+#: .\analizador\templates\info_grafos.html:598
+msgid "EJEMPLO DIJKSTRA"
+msgstr "Exemple de Dijkstra"
+
+#: .\analizador\templates\info_grafos.html:606
+msgid "Paso 1"
+msgstr "Étape 1"
+
+#: .\analizador\templates\info_grafos.html:608
+msgid ""
+"\n"
+"                Se escoge de los nodos adyacentes aquel que tiene una menor peso\n"
+"                en la arista, en este caso, el nodo d.\n"
+"                "
+msgstr ""
+"\n"
+"Celui qui a un poids inférieur est choisi parmi les nœuds adjacents\n"
+"Dans le bord, dans ce cas, le nœud d."
+
+#: .\analizador\templates\info_grafos.html:613
+#: .\analizador\templates\info_grafos.html:632
+#: .\analizador\templates\info_grafos.html:644
+#: .\analizador\templates\info_grafos.html:664
+#: .\analizador\templates\info_grafos.html:684
+#: .\analizador\templates\info_grafos.html:704
+#: .\analizador\templates\info_grafos.html:723
+msgid "Distancia:"
+msgstr "Distance:"
+
+#: .\analizador\templates\info_grafos.html:614
+#: .\analizador\templates\info_grafos.html:633
+#: .\analizador\templates\info_grafos.html:645
+#: .\analizador\templates\info_grafos.html:665
+#: .\analizador\templates\info_grafos.html:685
+#: .\analizador\templates\info_grafos.html:705
+#: .\analizador\templates\info_grafos.html:724
+msgid "Nodos procesados:"
+msgstr "Nœuds traités:"
+
+#: .\analizador\templates\info_grafos.html:623
+msgid "Paso 2"
+msgstr "Étape 2"
+
+#: .\analizador\templates\info_grafos.html:625
+msgid ""
+"\n"
+"                Ahora, vemos que se añade un nuevo candidato, el vértice e, y el\n"
+"                vértice c, pero esta vez a través del d. Pero el camino mínimo\n"
+"                surge al añadir el vértice c.\n"
+"                "
+msgstr ""
+"\n"
+"Maintenant, nous voyons qu'un nouveau candidat, le sommet E et le\n"
+"Vertex C, mais cette fois à travers d.Mais le chemin minimum\n"
+"Il survient lors de l'ajout du sommet c."
+
+#: .\analizador\templates\info_grafos.html:631
+#: .\analizador\templates\info_grafos.html:643
+#: .\analizador\templates\info_grafos.html:662
+#: .\analizador\templates\info_grafos.html:683
+#: .\analizador\templates\info_grafos.html:703
+#: .\analizador\templates\info_grafos.html:722
+msgid "Camino:"
+msgstr "Chemin:"
+
+#: .\analizador\templates\info_grafos.html:642
+msgid "Paso 3"
+msgstr "Étape 3"
+
+#: .\analizador\templates\info_grafos.html:654
+msgid "Paso 4"
+msgstr "Étape 4"
+
+#: .\analizador\templates\info_grafos.html:656
+msgid ""
+"\n"
+"                Como podemos comprobar, se han añadido un candidato nuevo, el\n"
+"                vértice f, a través del vértice b. El mínimo camino hallado en\n"
+"                todo el grafo hasta ahora es el siguiente:\n"
+"                "
+msgstr ""
+"\n"
+"Comme nous pouvons le voir, un nouveau candidat a été ajouté, le\n"
+"Vertex f, à travers le sommet b.Le chemin minimum trouvé dans\n"
+"Tout le graphique est le suivant:"
+
+#: .\analizador\templates\info_grafos.html:674
+msgid "Paso 5"
+msgstr "Étape 5"
+
+#: .\analizador\templates\info_grafos.html:676
+msgid ""
+"\n"
+"                En este antepenúltimo paso, se añaden tres vértices candidatos,\n"
+"                los vértices g, z y e. Este último ya estaba pero en esta\n"
+"                ocasión aparece a través del vértice f. En este caso el camino\n"
+"                mínimo, que cambia un poco con respecto al anterior, es:\n"
+"                "
+msgstr ""
+"\n"
+"Dans cette étape antépénulte, trois sommets candidats sont ajoutés,\n"
+"Les sommets G, Z et E.Ce dernier était déjà mais dans ce\n"
+"L'occasion apparaît à travers le sommet f.Dans ce cas, la route\n"
+"Minimum, qui change un peu par rapport à la précédente, est:"
+
+#: .\analizador\templates\info_grafos.html:694
+msgid "Paso 6"
+msgstr "Étape 6"
+
+#: .\analizador\templates\info_grafos.html:696
+msgid ""
+"\n"
+"                En el penúltimo paso, vuelve a aparecer otro candidato: el\n"
+"                vértice e, pero esta vez a través del vértice f. De todas\n"
+"                formas, el camino mínimo vuelve a cambiar para retomar el camino\n"
+"                que venía siguiendo en los pasos anteriores:\n"
+"                "
+msgstr ""
+"\n"
+"Dans l'avant-dernier étape, un autre candidat réapparaît: le\n"
+"Vertex e, mais cette fois à travers le sommet f.De toutes\n"
+"formes, le chemin minimum change à nouveau pour reprendre la route\n"
+"Cela avait suivi dans les étapes précédentes:"
+
+#: .\analizador\templates\info_grafos.html:714
+msgid "Paso 7"
+msgstr "Étape 7"
+
+#: .\analizador\templates\info_grafos.html:716
+msgid ""
+"\n"
+"                Por fin, llegamos al último paso, en el que sólo se añade un\n"
+"                candidato, el vértice z a través del vértice e. El camino mínimo\n"
+"                y final obtenido es:\n"
+"                "
+msgstr ""
+"\n"
+"Enfin, nous atteignons la dernière étape, dans laquelle un seul est ajouté\n"
+"candidat, sommet z à travers le sommet e.Le chemin minimum\n"
+"Et final obtenu est:"
+
+#: .\analizador\views.py:7
+msgid "Bienvenido a la página principal"
+msgstr "Bienvenue sur la page principale"
+
+#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\venv\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:155
+#: .\venv\Lib\site-packages\django\forms\fields.py:768
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:216
+msgid "Enter a valid integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:227
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\venv\Lib\site-packages\django\core\validators.py:310
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:318
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:330
+#: .\venv\Lib\site-packages\django\core\validators.py:339
+#: .\venv\Lib\site-packages\django\core\validators.py:353
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2215
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:332
+msgid "IPv4"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:341
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:355
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:396
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:402
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:437
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:446
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:455
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:462
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:494
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:512
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:535
+#: .\venv\Lib\site-packages\django\forms\fields.py:359
+#: .\venv\Lib\site-packages\django\forms\fields.py:398
+msgid "Enter a number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:537
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:542
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:547
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:618
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:680
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1572
+#: .\venv\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1574
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1157
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1159
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1209
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1211
+msgid "String (unlimited)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1320
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1421
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1425
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1560
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1429
+msgid "Date (without time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1556
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1564
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1569
+msgid "Date (with time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1696
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1698
+msgid "Decimal number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1859
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1863
+msgid "Duration"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1915
+msgid "Email address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1940
+msgid "File path"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2018
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2020
+msgid "Floating point number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2060
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2062
+msgid "Integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2158
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2175
+msgid "Small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2183
+msgid "IPv4 address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2214
+msgid "IP address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2305
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2306
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2308
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2359
+msgid "Positive big integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2374
+msgid "Positive integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2389
+msgid "Positive small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2405
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2441
+msgid "Text"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2521
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2525
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2529
+msgid "Time"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2637
+msgid "URL"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2661
+msgid "Raw binary data"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2726
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2728
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:932
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:934
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1228
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1285
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1287
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1335
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the
+#. label
+#: .\venv\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:308
+msgid "Enter a whole number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:479
+#: .\venv\Lib\site-packages\django\forms\fields.py:1260
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:502
+#: .\venv\Lib\site-packages\django\forms\fields.py:1261
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:529
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:563
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:564
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:633
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:634
+msgid "No file was submitted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:635
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:637
+#, python-format
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:642
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:710
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:882
+#: .\venv\Lib\site-packages\django\forms\fields.py:968
+#: .\venv\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:970
+#: .\venv\Lib\site-packages\django\forms\fields.py:1089
+#: .\venv\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1090
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1332
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1362
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\venv\Lib\site-packages\django\forms\forms.py:94
+msgid ":"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\forms.py:230
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv\Lib\site-packages\django\forms\formsets.py:491
+msgid "Order"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1450
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:461
+msgid "Clear"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:462
+msgid "Currently"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:463
+msgid "Change"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:800
+msgid "Unknown"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:801
+msgid "Yes"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:802
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:75
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:286
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\venv\Lib\site-packages\django\utils\text.py:305
+#: .\venv\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:64
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:115
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:349
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:68
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "Russian"
+#~ msgstr "russe"

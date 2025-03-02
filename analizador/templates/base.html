@@ -1,0 +1,50 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}LyCenciados Corruptos{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ timestamp }}">
+  </head>
+  <body>
+    <!-- Header común en todas las páginas -->
+    <header>
+      <nav class="rectangle1">
+        <a href="{% url 'about' %}" class="header-link">{% translate "Documentación" %}</a>
+        <a href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git" class="header-link">GitHub</a>
+        <a href="{% url 'info_grafos' %}" class="header-link">{% translate "Sobre los Grafos" %}</a>
+        <div class="language-container">
+          <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            <select name="language" onchange="this.form.submit()" id="language-select">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+              {% endfor %}
+            </select>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    
+    <!-- Footer común en todas las páginas -->
+    <footer>
+      <p>{% translate "Diseñada por LyCenciados Corruptos" %}</p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="{% static 'js/entrada.js' %}"></script>
+  </body>
+</html>

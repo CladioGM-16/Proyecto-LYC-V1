@@ -1,0 +1,738 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Informacion_grafos</title>
+    {% load static %}
+    <style>
+      * {
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+/* Header */
+.rectangle1 {
+  width: 100%;
+  background-color: #0045a67b;
+  padding: 10px 0;
+  border-bottom-left-radius: 20px; /* Ajusta el valor según lo que necesites */
+  border-bottom-right-radius: 20px; /* Ajusta el valor según lo que necesites */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35); /* Agrega sombra */
+}
+
+/* Enlaces del header */
+.header-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+
+  transition: background 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: #00296321;
+}
+
+/* Estilo para el select del idioma */
+#language-select {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #00296321;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  width: auto; /* Ajusta el tamaño del select según sea necesario */
+
+  display: inline-block;
+  text-align: center;
+}
+
+#language-select:hover {
+  background-color: #001d458a;
+}
+
+
+
+
+
+      body {
+        padding: 0px;
+        background-image: url("../imagenes/fondo.jpg");
+      }
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        height: 590px
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .content {
+        display: flex;
+        gap: 20px;
+      }
+      .left {
+        width: 40%;
+      }
+      .right img {
+        width: 33%;
+        max-height: 150px;
+        object-fit: contain;
+        display: block;
+        margin: 10px auto;
+        border: 2px solid black;
+      }
+
+      .left img {
+        width: 100%;
+        display: block;
+        border: 2px solid black;
+        margin-top: 15px;
+      }
+      .definition {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .definition strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .right {
+        width: 60%;
+        font-size: 14px;
+        text-align: justify;
+      }
+      .box ul {
+        padding-left: 30px;
+      }
+      .box ul li {
+        text-indent: 20px;
+      }
+      .right strong {
+        font-weight: bold;
+      }
+      .graphs-section {
+        margin-top: 40px;
+      }
+      .graphs-representation {
+        margin-top: 40px;
+      }
+      .graphs-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .graph-box {
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        background: white;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .graph-box img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+      }
+      .graphs-section {
+        margin-top: 40px;
+      }
+
+      .graph-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .graph-images img {
+        width: 200px;
+        height: auto;
+        border: 2px solid black;
+      }
+      .dijkstra-section {
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+      .dijkstra-content {
+        display: flex;
+        gap: 20px;
+      }
+      .dijkstra-text {
+        width: 60%;
+        font-size: 14px;
+        text-align: justify;
+      }
+      .dijkstra-text strong {
+        font-weight: bold;
+      }
+      .dijkstra-image {
+        width: 40%;
+        text-align: center;
+      }
+      .dijkstra-image img {
+        width: 100%;
+        border: 2px solid black;
+      }
+      .example-section {
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+      .example-content {
+        text-align: center;
+      }
+      .example-content img {
+        width: 70%;
+        max-width: 600px;
+        border: 2px solid black;
+      }
+      .example-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .example-text {
+        width: 45%;
+        font-size: 14px;
+        text-align: justify;
+        margin-left: 20px;
+      }
+      .example-details img {
+        width: 45%;
+        max-width: 300px;
+        border: 2px solid black;
+      }
+
+      .graphs-section p,
+      .graphs-representation p,
+      .graphs-representation ul li {
+        font-size: 14px;
+      }
+      .justified-text {
+        text-align: justify;
+        font-size: 14px;
+      }
+      .dijkstra-section h2 {
+        text-align: center;
+      }
+
+
+      footer {
+  background-color: #0045a67b;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  position: relative;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
+}
+
+    </style>
+    <link rel="stylesheet" href="{% static 'CSS/info_grafos_styles.css' %}" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="rectangle1">
+        <a href="{% url 'about' %}" class="header-link"
+          >{% translate "Documentación" %}</a
+        >
+        <a
+          href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
+          class="header-link"
+          >GitHub</a
+        >
+        <a href="{% url 'info_grafos' %}" class="header-link"
+          >{% translate "Sobre los Grafos" %}</a
+        >
+        
+        <div class="language-container">
+          <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.path }}">
+              <select name="language" onchange="this.form.submit()" id="language-select">
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                      <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                          {{ language.name_local }} ({{ language.code }})
+                      </option>
+                  {% endfor %}
+              </select>
+          </form>
+      </div>
+      
+      </nav>
+      <!-- {% blocktranslate %}
+      <p>
+        HOLA MI NOMBRE ES JHAIR HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
+        HOLAHOLA HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
+        HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA
+        HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA HOLA
+        HOLA HOLA HOLA HOLA HOLA HOLA HOLA
+      </p>
+      <p>{{message}}</p>
+      {% endblocktranslate %} -->
+    </header>
+
+
+
+    <div class="container">
+      <h1 style="text-align: center">{% translate "TEORIA DE GRAFOS" %}</h1>
+      <div class="content">
+        <div class="left">
+          <div class="definition">
+            <strong>{% translate "Definición" %}</strong>
+            <p>
+              {% blocktranslate %} 
+              Un grafo es una estructura matemática que representa relaciones
+              entre un conjunto de objetos. Se define formalmente como un par
+              ordenado:
+              {% endblocktranslate %}
+            </p>
+            <p><strong>G=(V,E)</strong></p>
+            <p>{% translate "Donde:" %}</p>
+            <ul>
+              <li>V {% translate "es un conjunto finito de vértices o nodos." %}</li>
+              <li>
+                {% blocktranslate %}
+                E es un conjunto de aristas o edges, que conectan pares de
+                vértices.
+                {% endblocktranslate %}
+              </li>
+            </ul>
+            <p>
+              {% blocktranslate %}
+              <strong>Vecindad:</strong> Dos nodos son adyacentes si existe una
+              arista que los une.
+              {% endblocktranslate %}
+            </p>
+            <p>
+              {% blocktranslate %}
+              <strong>Distancia:</strong> La distancia entre dos nodos u y v es
+              la mínima cantidad de ejes por los que debo moverme para llegar de
+              u a v.
+              {% endblocktranslate %}
+            </p>
+          </div>
+          <img src="{% static 'imagenes/imagengrafos.png' %}" alt="Grafo" />
+        </div>
+        <div class="right">
+          <div class="box">
+            <strong>{% translate "Historia de la Teoría de Grafos" %}</strong>
+            <p>
+              {% blocktranslate %}
+              El origen de la teoría de grafos se remonta al siglo XVIII con el
+              problema de los puentes de Königsberg, planteado por
+              <strong>Leonhard Euler en 1736</strong>. Euler demostró que no
+              existía un camino que recorriera todos los puentes sin repetirlos,
+              sentando así las bases de la teoría de grafos y la topología.
+              {% endblocktranslate %}
+            </p>
+            <img
+              src="{% static 'imagenes/puenteeuler.png' %}"
+              alt="Puentes de Königsberg"
+            />
+            <p>
+              {% blocktranslate %}
+              En <strong>1847, Gustav Kirchhoff</strong> aplicó la teoría de
+              grafos en circuitos eléctricos, formulando las leyes de Kirchhoff.
+              {% endblocktranslate %}
+            </p>
+            <img
+              src="{% static 'imagenes/leyes.png' %}"
+              alt="Circuito de Kirchhoff"
+            />
+            <p>
+              {% blocktranslate %}
+              En <strong>1852, Francis Guthrie</strong> propuso el problema de
+              los cuatro colores, resuelto en <strong>1976</strong>. En
+              <strong>1857, Arthur Cayley</strong> utilizó los grafos para
+              contar isómeros químicos.
+              {% endblocktranslate %}
+            </p>
+            <p>
+              {% blocktranslate %}
+              El primer libro sobre teoría de grafos fue escrito por
+              <strong>Dénes Kőnig</strong> en <strong>1936</strong>.
+              {% endblocktranslate %}
+            </p>
+            <p>
+              {% blocktranslate %}
+              Desde la década de <strong>1950</strong>, los grafos se han usado
+              ampliamente en sociometría y redes sociales, permitiendo analizar
+              relaciones entre personas y estructuras organizacionales.
+              {% endblocktranslate %}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Tipos de Grafos -->
+      <div class="graphs-section">
+        <h1 style="text-align: center">{% translate "TIPOS DE GRAFOS" %}</h1>
+        <div
+          class="graphs-container"
+          style="display: flex; flex-wrap: wrap; justify-content: space-around"
+        >
+          <div class="graph-box" style="width: 30%; text-align: justify">
+            <strong>{% translate "Grafo Simple" %}</strong>
+            <p>
+              {% translate "No tiene lazos ni múltiples aristas entre los mismos vértices." %}
+            </p>
+            <img
+              src="{% static 'imagenes/grafosimple.png' %}"
+              alt="Grafo Simple"
+              style="width: 100%"
+            />
+          </div>
+          <div class="graph-box" style="width: 30%; text-align: justify">
+            <strong>{% translate "Multigrafo" %}</strong>
+            <p>{% translate "Permite múltiples aristas entre dos vértices." %}</p>
+            <img
+              src="{% static 'imagenes/multigrafo.png' %}"
+              alt="Multigrafo"
+              style="width: 100%"
+            />
+          </div>
+          <div class="graph-box" style="width: 30%; text-align: justify">
+            <strong>{% translate "Grafo Dirigido" %}</strong>
+            <p>
+              {% blocktranslate %}
+              Las aristas tienen una dirección específica representada con
+              flechas.
+              {% endblocktranslate %}
+            </p>
+            <img
+              src="{% static 'imagenes/grafodirigido.png' %}"
+              alt="Grafo Dirigido"
+              style="width: 100%"
+            />
+          </div>
+          <div class="graph-box" style="width: 30%; text-align: justify">
+            <strong>{% translate "Grafo Ponderado" %}</strong>
+            <p>{% translate "Las aristas tienen un peso o valor numérico." %}</p>
+            <img
+              src="{% static 'imagenes/grafoponderado.png' %}"
+              alt="Grafo Ponderado"
+              style="width: 100%"
+            />
+          </div>
+          <div class="graph-box" style="width: 30%; text-align: justify">
+            <strong>{% translate "Grafo Conexo" %}</strong>
+            <p>{% translate "Existe un camino entre cualquier par de vértices." %}</p>
+            <img
+              src="{% static 'imagenes/grafoconexo.png' %}"
+              alt="Grafo Conexo"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="graphs-representation">
+        <h1>{% translate "REPRESENTACIÓN DE GRAFOS" %}</h1>
+        <p>
+          {% blocktranslate %}
+          Los grafos pueden representarse de diversas maneras en la informática
+          y la teoría de grafos. Las dos formas más comunes son matriz de
+          adyacencia y lista de adyacencia. Cada una tiene sus ventajas y
+          desventajas dependiendo del tipo de grafo y del problema que se quiera
+          resolver.
+          {% endblocktranslate %}
+        </p>
+        <h2>{% translate "Matriz de Adyacencia" %}</h2>
+        <p>
+          {% blocktranslate %}
+          Es una matriz cuadrada de tamaño N×N (donde N es el número de
+          vértices) en la que cada celda indica si hay una arista entre dos
+          vértices.
+          {% endblocktranslate %}
+        </p>
+        <ul>
+          <li>
+            {% blocktranslate %}
+            Si en la posición (i,j) hay un 1, significa que existe una conexión
+            entre el nodo i y el nodo j.
+            {% endblocktranslate %}
+          </li>
+          <li>{% translate "Si hay un 0, significa que no existe tal conexión." %}</li>
+        </ul>
+        <div class="graph-images">
+          <img src="{% static 'imagenes/ejmrepre.png' %}" alt="Grafo 1" />
+          <img
+            src="{% static 'imagenes/matrizadyacencia.png' %}"
+            alt="Matriz de Adyacencia"
+          />
+        </div>
+        <h2>{% translate "Lista de Adyacencias" %}</h2>
+        <p>
+          {% blocktranslate %}
+          La lista de adyacencia es una representación de un grafo en la que
+          cada nodo tiene asociado un conjunto (o lista) de nodos adyacentes, es
+          decir, aquellos con los que tiene una conexión directa mediante una
+          arista.
+          {% endblocktranslate %}
+        </p>
+        <p>{% translate "En esta estructura:" %}</p>
+        <ul>
+          <li>
+            {% blocktranslate %}
+            Se utiliza un array o diccionario, donde cada índice o clave
+            representa un nodo.
+            {% endblocktranslate %}
+          </li>
+          <li>
+            {% blocktranslate %}
+            Cada entrada contiene una lista con los nodos a los que está
+            conectado.
+            {% endblocktranslate %}
+          </li>
+        </ul>
+        <div class="graph-images">
+          <img src="{% static 'imagenes/ejmrepre.png' %}" alt="Grafo 2" />
+          <img
+            src="{% static 'imagenes/listaadyacencia.png' %}"
+            alt="Lista de Adyacencia"
+          />
+        </div>
+      </div>
+
+      <div class="dijkstra-section">
+        <h2>{% translate "ALGORITMO DE"%} DIJKSTRA</h2>
+        <div class="dijkstra-content">
+          <div class="dijkstra-text">
+            <p>
+              {% blocktranslate %}
+              El algoritmo de Dijkstra es un método eficiente para encontrar el
+              camino más corto desde un nodo de origen a todos los demás nodos
+              en un grafo ponderado, siempre que los pesos de las aristas sean
+              no negativos. Fue desarrollado en 1956 por el científico
+              informático Edsger W. Dijkstra y se ha convertido en una
+              herramienta fundamental en teoría de grafos y optimización de
+              rutas.
+              {% endblocktranslate %}
+            </p>
+            <strong>{% translate "Pasos del Algoritmo" %}</strong>
+            <ul>
+              <li>
+                <strong>{% translate "Inicialización:" %}</strong>
+                <p>
+                  {% blocktranslate %}
+                  Se establece la distancia del nodo origen en 0 y la de los
+                  demás nodos en infinito. Se usa una cola de prioridad para
+                  procesar los nodos con menor distancia conocida.
+                  {% endblocktranslate %}
+                </p>
+              </li>
+              <li>
+                <strong>{% translate "Exploración de vecinos:" $}</strong>
+                <p>
+                  {% blocktranslate %}
+                  Se extrae el nodo con la menor distancia acumulada de la cola.
+                  Se recorren sus vecinos y, si se encuentra una ruta más corta
+                  hacia ellos, se actualiza su distancia. Se inserta nuevamente
+                  en la cola de prioridad si su distancia cambia.
+                  {% endblocktranslate %}
+                </p>
+              </li>
+              <li>
+                <strong>{% translate "Finalización:" %}</strong>
+                <p>
+                  {% blocktranslate %}
+                  El algoritmo se detiene cuando todos los nodos han sido
+                  procesados o cuando se alcanza un nodo destino específico (si
+                  se busca solo un camino mínimo en particular). Se puede
+                  reconstruir el camino más corto almacenando los predecesores
+                  de cada nodo.
+                  {% endblocktranslate %}
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="dijkstra-image">
+            <img
+              src="{% static 'imagenes/imgdjkistra.png' %}"
+              alt="Algoritmo de Dijkstra"
+            />
+            <strong>{% translate "Complejidad Computacional" %}</strong>
+            <p class="justified-text">
+              {% blocktranslate %}
+              La complejidad del algoritmo depende de la estructura de datos
+              utilizada para manejar la cola de prioridad:
+              {% endblocktranslate %}
+            </p>
+            <ul class="justified-text">
+              <li>{% translate "Usando una matriz de adyacencia:" %} O(V²)</li>
+              <li>{% translate "Usando un heap binario:" %} O((V+E) log V)</li>
+              <li>{% translate "Usando un Fibonacci Heap: " %} O(E + V log V)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="example-section">
+        <h2>{% translate "EJEMPLO DIJKSTRA" %}</h2>
+        <div class="example-content">
+          <img
+            src="{% static 'imagenes/ejemplo1.png' %}"
+            alt="Ejemplo Dijkstra 1"
+          />
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 1" %}</strong>
+              <p>
+                {% blocktranslate %}
+                Se escoge de los nodos adyacentes aquel que tiene una menor peso
+                en la arista, en este caso, el nodo d.
+                {% endblocktranslate %}
+              </p>
+              <p>{% translate "Distancia:" %} 5</p>
+              <p>{% translate "Nodos procesados:" %} A</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo2.png' %}"
+              alt="Ejemplo Dijkstra 2"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 2" %}</strong>
+              <p>
+                {% blocktranslate %}
+                Ahora, vemos que se añade un nuevo candidato, el vértice e, y el
+                vértice c, pero esta vez a través del d. Pero el camino mínimo
+                surge al añadir el vértice c.
+                {% endblocktranslate %}
+              </p>
+              <p>{% translate "Camino:" %} ADC</p>
+              <p>{% translate "Distancia:" %} 9</p>
+              <p>{% translate "Nodos procesados:" %} A, D</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo3.png' %}"
+              alt="Ejemplo Dijkstra 3"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 3" %}</strong>
+              <p>{% translate "Camino:" %} ADCB</p>
+              <p>{% translate "Distancia:" %} 11</p>
+              <p>{% translate "Nodos procesados:" %} A, D, C</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo4.png' %}"
+              alt="Ejemplo Dijkstra 4"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 4" %}</strong>
+              <p>
+                {% blocktranslate %}
+                Como podemos comprobar, se han añadido un candidato nuevo, el
+                vértice f, a través del vértice b. El mínimo camino hallado en
+                todo el grafo hasta ahora es el siguiente:
+                {% endblocktranslate %}
+              </p>
+              <strong>{% translate "Camino:" %}</strong>
+              <p>ADCBF</p>
+              <p>{% translate "Distancia:" %} 15</p>
+              <p>{% translate "Nodos procesados:" %} A, D, C, B</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo4.png' %}"
+              alt="Ejemplo Dijkstra 4"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 5" %}</strong>
+              <p>
+                {% blocktranslate %}
+                En este antepenúltimo paso, se añaden tres vértices candidatos,
+                los vértices g, z y e. Este último ya estaba pero en esta
+                ocasión aparece a través del vértice f. En este caso el camino
+                mínimo, que cambia un poco con respecto al anterior, es:
+                {% endblocktranslate %}
+              </p>
+              <p>{% translate "Camino:" %} ADCBG</p>
+              <p>{% translate "Distancia:" %} 17</p>
+              <p>{% translate "Nodos procesados:" %} A, D, C, B, F</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo5.png' %}"
+              alt="Ejemplo Dijkstra 5"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 6" %}</strong>
+              <p>
+                {% blocktranslate %}
+                En el penúltimo paso, vuelve a aparecer otro candidato: el
+                vértice e, pero esta vez a través del vértice f. De todas
+                formas, el camino mínimo vuelve a cambiar para retomar el camino
+                que venía siguiendo en los pasos anteriores:
+                {% endblocktranslate %}
+              </p>
+              <p>{% translate "Camino:" %} ADCBFE</p>
+              <p>{% translate "Distancia:" %} 18</p>
+              <p>{% translate "Nodos procesados:" %} A, D, C, B, F, G</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo6.png' %}"
+              alt="Ejemplo Dijkstra 4"
+            />
+          </div>
+          <div class="example-details">
+            <div class="example-text">
+              <strong>{% translate "Paso 7" %}</strong>
+              <p>
+                {% blocktranslate %}
+                Por fin, llegamos al último paso, en el que sólo se añade un
+                candidato, el vértice z a través del vértice e. El camino mínimo
+                y final obtenido es:
+                {% endblocktranslate %}
+              </p>
+              <p>{% translate "Camino:" %}</p>
+              <p>{% translate "Distancia:" %} 23</p>
+              <p>{% translate "Nodos procesados:" %} A, D, C, B, F, G, E</p>
+            </div>
+            <img
+              src="{% static 'imagenes/ejemplo7.png' %}"
+              alt="Ejemplo Dijkstra 5"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
+    </footer>
+  </body>
+</html>
