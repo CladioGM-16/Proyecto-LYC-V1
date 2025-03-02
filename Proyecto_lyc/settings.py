@@ -29,14 +29,10 @@ DEBUG = "RENDER" not in os.environ
 
 # Lista vacía de ALLOWED_HOSTS
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ['proyecto-lyc.onrender.com', 'localhost', '127.0.0.1']
 
 # Obtener el hostname de Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
-
-# Si está definido, lo agregamos a ALLOWED_HOSTS
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-# Application definitionz
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -46,14 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'analizador',
-    'grafos',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -68,7 +62,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'analizador/templates'),
-            os.path.join(BASE_DIR, 'grafos/templates'), 
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -148,22 +141,14 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-STATIC_URL = '/Static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Verificar si la carpeta 'Static' existe, y si es así, agregarla a STATICFILES_DIRS
-static_dir = os.path.join(BASE_DIR, "Static")
-
-if os.path.exists(static_dir):
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "analizador", "static"), static_dir]
-else:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR,"analizador", "static")]
-
-# Activar compresión y almacenamiento en caché para mejorar rendimiento en producción
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

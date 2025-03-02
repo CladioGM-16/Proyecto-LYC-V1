@@ -16,11 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from analizador.views import home, about, info_grafos, idiomas
-from django.conf.urls.i18n import i18n_patterns  # ✅ Importamos i18n_patterns
-
-from grafos.views import home as grafos_home
-from django.urls import path, include  
+from analizador.views import home, about, info_grafos, idiomas, crear_grafos
+from django.conf.urls.i18n import i18n_patterns  
 
 
 urlpatterns = [
@@ -29,9 +26,8 @@ urlpatterns = [
     path('info_grafos/', info_grafos, name='info_grafos'),
     path('idiomas/', idiomas, name='idiomas'),
     path('admin/', admin.site.urls),
-
-    path('grafos_home/', grafos_home, name='grafos_home'),
-    path('api/', include('grafos.api.urls')),
+    path('crear_grafos/', crear_grafos, name='crear_grafos'),
+    path('api/', include('analizador.api.urls')),
 ]
 
 urlpatterns += [

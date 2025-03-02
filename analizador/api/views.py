@@ -2,7 +2,7 @@ import heapq
 import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from grafos.algoritmos.dijkstra import dijkstra  # ✅ Importamos desde el archivo correcto
+from analizador.algoritmos.dijkstra import dijkstra  # ✅ Importamos desde el archivo correcto
 
 @csrf_exempt
 def run_dijkstra(request):
