@@ -51,3 +51,4 @@ for entry in po:
 po.save(archivo_po)
 
 print("\n🎉 Traducción automática corregida completada. Ahora ejecuta 'django-admin compilemessages'.")
+

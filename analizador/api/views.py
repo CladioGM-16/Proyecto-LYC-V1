@@ -35,5 +35,5 @@ def run_dijkstra(request):
 
         except Exception as e:
             import traceback
-            print("❌ Error en Django:", traceback.format_exc())  # 🔥 Ver error detallado
+            print(" Error en Django:", traceback.format_exc())  # 🔥 Ver error detallado
             return JsonResponse({"error": str(e)}, status=500)
