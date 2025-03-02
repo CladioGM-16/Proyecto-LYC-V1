@@ -11,7 +11,6 @@
 
 </head>
 <body>
-
     <header>
       <nav class="rectangle1">
         <a href="{% url 'about' %}" class="header-link"
@@ -58,28 +57,27 @@
 
     <main>
       <div class="main-content">
+        <div class="buttons">
+          <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
+          <button onclick="cargarTexto()">{% translate "Cargar"  %}</button>
+        </div>
         <section class="editor-container">
-          <div class="buttons">
-            <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
-            <button onclick="cargarTexto()">{% translate "Cargar"  %}</button>
-          </div>
-
+          
           <div class="code-editor">
             <div class="line-numbers" id="lineNumbers"></div>
             <textarea id="codeArea" spellcheck="false"></textarea>
           </div>
-
-            
             <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
                 <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
             
                 <!-- Botón debajo de la imagen -->
                 <button onclick="window.location.href='/grafos_home/'" class="grafo-button">Crea tu grafo</button>
             </aside>
-            
-
-            
+           
         </div>
+        <div class="output">
+              <p>{% translate "Resultado aquí..." %}</p>
+          </div>   
     </main>
 
     <footer>

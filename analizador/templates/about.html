@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,13 +9,64 @@
     <style>
       * {
         margin: 0;
-        padding: 5px;
+        padding: 0px;
         box-sizing: border-box;
       }
 
+
+      /* Header */
+.rectangle1 {
+  width: 100%;
+  background-color: #0045a67b;
+  padding: 10px 0;
+  border-bottom-left-radius: 20px; /* Ajusta el valor según lo que necesites */
+  border-bottom-right-radius: 20px; /* Ajusta el valor según lo que necesites */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35); /* Agrega sombra */
+}
+
+/* Enlaces del header */
+.header-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+
+  transition: background 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: #00296321;
+}
+
+/* Estilo para el select del idioma */
+#language-select {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #00296321;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  width: auto; /* Ajusta el tamaño del select según sea necesario */
+
+  display: inline-block;
+  text-align: center;
+}
+
+#language-select:hover {
+  background-color: #001d458a;
+}
+
       body {
-        background-color: #ffd84d;
-        padding: 20px;
+        background-image: url("../imagenes/fondo.jpg");
+        padding: 0px;
       }
       .container {
         max-width: 1000px;
@@ -23,7 +76,7 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         overflow-y: auto;
-        height: 90vh;
+        height: 590px;
       }
       .section {
         width: 100%;
@@ -72,24 +125,72 @@
         background-color: black;
         color: white;
       }
+      footer {
+  background-color: #0045a67b;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  position: relative;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
+}
     </style>
     <link rel="stylesheet" href="{% static 'CSS/about_styles.css' %}" />
   </head>
   <body>
+
+    <header>
+      <nav class="rectangle1">
+        <a href="{% url 'about' %}" class="header-link"
+          >{% translate "Documentación" %}</a
+        >
+        <a
+          href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
+          class="header-link"
+          >GitHub</a
+        >
+        <a href="{% url 'info_grafos' %}" class="header-link"
+          >{% translate "Sobre los Grafos" %}</a
+        >
+        
+        <div class="language-container">
+          <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.path }}">
+              <select name="language" onchange="this.form.submit()" id="language-select">
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                      <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                          {{ language.name_local }} ({{ language.code }})
+                      </option>
+                  {% endfor %}
+              </select>
+          </form>
+      </div>
+      
+      </nav>
+    </header>
     <div class="container">
       <div class="section">
         <div class="text">
-          <h1>Introducción</h1>
+          <h1>{% translate "Introducción" %}</h1>
           <p>
+            {% blocktranslate %}
             En el desarrollo de software, los analizadores léxicos, sintácticos
             y semánticos juegan un papel esencial en la interpretación y
             validación de código fuente. Estos componentes garantizan que los
             programas sean comprensibles y funcionales al detectar errores antes
             de la ejecución, lo que evita problemas que podrían impedir la
             correcta lectura o ejecución de instrucciones.
+            {% endblocktranslate %}
           </p>
 
           <p>
+            {% blocktranslate %}
             El análisis léxico transforma el código en tokens, el análisis
             sintáctico verifica la estructura del lenguaje, y el análisis
             semántico asegura que las expresiones tengan sentido dentro del
@@ -98,8 +199,10 @@
             para lenguajes de programación bien establecidos, como los
             utilizados en bases de datos, procesamiento de números y otros
             dominios tradicionales.
+            {% endblocktranslate %}
           </p>
           <p>
+            {% blocktranslate %}
             Sin embargo, cuando se trata de grafos, el desarrollo de
             herramientas especializadas para analizar su representación formal
             es menos común. A pesar de su importancia en múltiples disciplinas,
@@ -112,6 +215,7 @@
             ofrecer una solución innovadora que permita una validación precisa
             de grafos en diversos contextos, facilitando su interpretación y uso
             en aplicaciones computacionales.
+            {% endblocktranslate %}
           </p>
         </div>
         <div class="image">
@@ -123,34 +227,44 @@
       </div>
       <div class="section">
         <div class="text">
-          <h1>Objetivos</h1>
-          <h2><u>Objetivo General</u></h2>
+          <h1>{% translate "Objetivos" %}</h1>
+          <h2><u>{% translate "Objetivo General" %}</u></h2>
           <p>
+            {% blocktranslate %}
             Desarrollar un analizador para la validación de estructuras de
             grafos, permitiendo la detección de errores en su definición y
             representación.
+            {% endblocktranslate %}
           </p>
-          <h2><u>Objetivos Específicos</u></h2>
+          <h2><u>{% translate "Objetivos Específicos" %}</u></h2>
           <ul>
             <li>
+              {% blocktranslate %}
               Diseñar una gramática formal para la definición de grafos,
               incluyendo palabras reservadas, identificadores, números y
               símbolos especiales.
+              {% endblocktranslate %}
             </li>
             <li>
+              {% blocktranslate %}
               Implementar un analizador léxico que identifique y clasifique los
               tokens de entrada.
+              {% endblocktranslate %}
             </li>
             <li>
+              {% blocktranslate %}
               Desarrollar un analizador sintáctico que valide la correcta
               estructura de los grafos según las reglas definidas en la
               gramática.
+              {% endblocktranslate %}
             </li>
             <li>
+              {% blocktranslate %}
               Incorporar un análisis semántico que verifique la coherencia de la
               información representada en los grafos.
+              {% endblocktranslate %}
             </li>
-            <li>Crear un prototipo de interfaz en herramientas de diseño.</li>
+            <li>{% translate "Crear un prototipo de interfaz en herramientas de diseño." %}</li>
           </ul>
         </div>
         <div class="image">
@@ -162,67 +276,77 @@
       </div>
       <div class="section">
         <div class="text">
-          <h1>Marco Teórico</h1>
+          <h1>{% translate "Marco Teórico" %}</h1>
         </div>
       </div>
 
       <div class="grid-container">
         <div class="grid-item">
-          <h2><b>Compilador</b></h2>
+          <h2><b>{% translate "Compilador" %}</b></h2>
           <p>
+            {% blocktranslate %}
             Un compilador es un programa que traduce código fuente escrito en un
             lenguaje de alto nivel a un lenguaje de bajo nivel, como el código
             de máquina. Este proceso ocurre antes de la ejecución, permitiendo
             que el programa se ejecute de manera independiente sin necesidad del
             código original.
+            {% endblocktranslate %}
           </p>
         </div>
         <div class="grid-item">
-          <h2><b>Intérprete</b></h2>
+          <h2><b>{% translate "Intérprete" %}</b></h2>
           <p>
+            {% blocktranslate %}
             Un intérprete es un programa que ejecuta código fuente línea por
             línea sin generar un archivo ejecutable. Esto facilita la depuración
             y permite una ejecución interactiva, aunque puede ser más lento que
             un compilador. Lenguajes como Python y JavaScript utilizan
             intérpretes para ejecutar sus programas.
+            {% endblocktranslate %}
           </p>
         </div>
         <div class="grid-item">
-          <h2><b>Lenguaje Formal</b></h2>
+          <h2><b>{% translate "Lenguaje Formal" %}</b></h2>
           <p>
+            {% blocktranslate %}
             Un lenguaje formal es un conjunto de cadenas de símbolos definidos
             por reglas precisas, utilizadas en lógica, matemáticas y
             computación. Se emplea en el diseño de lenguajes de programación y
             protocolos de comunicación, garantizando estructuras bien definidas
             y comprensibles por máquinas y humanos.
+            {% endblocktranslate %} 
           </p>
         </div>
         <div class="grid-item">
-          <h2><b>Gramática</b></h2>
+          <h2><b>{% translate "Gramática" %}</b></h2>
           <p>
+            {% blocktranslate %}
             Una gramática es un conjunto de reglas que describen cómo se pueden
             formar expresiones válidas en un lenguaje formal. Se usa en la
             construcción de lenguajes de programación y define la estructura
             correcta de las instrucciones que el compilador o intérprete debe
             procesar.
+            {% endblocktranslate %} 
           </p>
         </div>
       </div>
       <div class="section">
         <div class="text">
-          <h1>Frameworks y Herramientas</h1>
+          <h1>{% translate "Frameworks y Herramientas" %}</h1>
         </div>
       </div>
       <div class="section">
         <div class="text">
           <h2>Django</h2>
           <p>
+            {% blocktranslate %}
             Django es un framework web de código abierto basado en Python,
             diseñado para facilitar el desarrollo rápido de aplicaciones web
             seguras y escalables. Utiliza el patrón Modelo-Vista-Controlador
             (MVC). Proporciona herramientas para la gestión de bases de datos,
             autenticación de usuarios y generación de interfaces de
             administración, entre otras funcionalidades.
+            {% endblocktranslate %} 
           </p>
         </div>
         <div class="image">
@@ -236,11 +360,13 @@
         <div class="text">
           <h2>Render</h2>
           <p>
+            {% blocktranslate %}
             Un compilador es un programa que traduce código fuente escrito en un
             lenguaje de alto nivel a un lenguaje de bajo nivel, como el código
             de máquina. Este proceso ocurre antes de la ejecución, permitiendo
             que el programa se ejecute de manera independiente sin necesidad del
             código original.
+            {% endblocktranslate %} 
           </p>
         </div>
         <div class="image">
@@ -254,11 +380,13 @@
         <div class="text">
           <h2>GitHub</h2>
           <p>
+            {% blocktranslate %}
             Un compilador es un programa que traduce código fuente escrito en un
             lenguaje de alto nivel a un lenguaje de bajo nivel, como el código
             de máquina. Este proceso ocurre antes de la ejecución, permitiendo
             que el programa se ejecute de manera independiente sin necesidad del
             código original.
+            {% endblocktranslate %} 
           </p>
         </div>
         <div class="image">
@@ -270,103 +398,116 @@
       </div>
       <div class="section">
         <div class="text">
-          <h1>Análisis Léxico</h1>
+          <h1>{% translate "Análisis Léxico" %}</h1>
           <p>
+            {% blocktranslate %}
             El análisis léxico es la primera fase en el proceso de compilación o
             interpretación de un programa, encargándose de transformar el código
             fuente en una secuencia de unidades mínimas de significado llamadas
             tokens. Durante esta fase, el analizador léxico escanea el código,
             eliminando espacios en blanco y comentarios, y categorizando cada
             elemento en su respectivo tipo de token
+            {% endblocktranslate %} 
           </p>
-          <h2>Token</h2>
+          <h2>{% translate "Token" %}</h2>
           <p>
+            {% blocktranslate %}
             Un token es la unidad léxica más pequeña con significado dentro de
             un lenguaje de programación. Cada línea de código está compuesta por
             varios tokens, que pueden representar palabras reservadas,
             identificadores, operadores, números o símbolos especiales.
+            {% endblocktranslate %} 
           </p>
           <ul>
             <li>
+              {% blocktranslate %}
               <b>Palabra reservada:</b> Son términos predefinidos en un lenguaje
               de programación y suelen ser palabras reservadas, lo que significa
               que no pueden usarse como identificadores.
+              {% endblocktranslate %} 
             </li>
             <li>
+              {% blocktranslate %}
               <b>Identificador:</b> Es el nombre que se le asigna a variables,
               funciones, clases, objetos o cualquier entidad definida por el
               usuario en un lenguaje de programación.
+              {% endblocktranslate %} 
             </li>
             <li>
+              {% blocktranslate %} 
               <b>Números:</b> Representan valores numéricos que pueden ser
               utilizados en cálculos matemáticos y asignaciones de valores.
+              {% endblocktranslate %} 
             </li>
             <li>
+              {% blocktranslate %}
               <b>Símbolos especiales:</b> Son caracteres que cumplen funciones
               específicas dentro del lenguaje, como separadores, delimitadores o
               terminadores de expresiones
+              {% endblocktranslate %} 
             </li>
           </ul>
         </div>
         <table class="table">
           <tr>
-            <th>Token</th>
-            <th>Observación</th>
+            <th>{% translate "Token" %}</th>
+            <th>{% translate "Observación" %}</th>
           </tr>
           <tr>
             <td>Nodo</td>
-            <td>Palabra reservada</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
-            <td>Nombre de nodo</td>
-            <td>Identificador</td>
+            <td>{% translate "Nombre de nodo" %}</td>
+            <td>{% translate "Identificador" %}</td>
           </tr>
           <tr>
-            <td>Números enteros positivos</td>
-            <td>Números</td>
+            <td>{% translate "Números enteros positivos" %}</td>
+            <td>{% translate "Números" %}</td>
           </tr>
           <tr>
             <td>(</td>
-            <td>Símbolos especiales</td>
+            <td>{% translate "Símbolos especiales"%}</td>
           </tr>
           <tr>
             <td>Arista</td>
-            <td>Palabra reservada</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
             <td>Peso</td>
-            <td>Palabra reservada</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
             <td>,</td>
-            <td>Símbolos especiales</td>
+            <td>{% translate "Símbolos especiales" %}</td>
           </tr>
           <tr>
             <td>;</td>
-            <td>Símbolos especiales</td>
+            <td>{% translate "Símbolos especiales" %}</td>
           </tr>
           <tr>
             <td>Ruta_mínima</td>
-            <td>Palabra reservada</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
-            <td>Eliminar_nodo</td>
-            <td>Palabra reservada</td>
+            <td>{"Eliminar_nodo"</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
             <td>Eliminar_arista</td>
-            <td>Palabra reservada</td>
+            <td>{% translate "Palabra reservada" %}</td>
           </tr>
           <tr>
             <td>)</td>
-            <td>Símbolos especiales</td>
+            <td>{% translate "Símbolos especiales" %}</td>
           </tr>
         </table>
       </div>
       <div class="section">
         <div class="text">
-          <h1>Análisis Sintáctico</h1>
+          <h1>{% translate "Análisis Sintáctico" %}</h1>
           <p>
+            {% blocktranslate %}
             El análisis sintáctico es la fase de un compilador o intérprete que
             verifica si una secuencia de tokens cumple con las reglas
             gramaticales de un lenguaje de programación. Se basa en gramáticas
@@ -374,26 +515,35 @@
             derivación o autómatas de pila. Su objetivo es estructurar
             correctamente la entrada para que pueda ser interpretada o ejecutada
             sin errores.
+            {% endblocktranslate %} 
           </p>
-          <h2>Autómata a Pila</h2>
+          <h2>{% translate "Autómata a Pila" %}</h2>
           <p>
+            {% blocktranslate %}
             Un autómata de pila es un modelo computacional que extiende los
             autómatas finitos al incorporar una pila, permitiéndole reconocer
             gramáticas más complejas, como las libres de contexto.
+            {% endblocktranslate %} 
           </p>
           <ul>
             <li>
+              {% blocktranslate %} 
               <b>Estados:</b> Representan las distintas fases del procesamiento
               de la entrada.
+              {% endblocktranslate %} 
             </li>
             <li>
+              {% blocktranslate %}
               <b>Transiciones:</b> Indican cómo cambia el autómata de un estado
               a otro en función de un símbolo de entrada.
+              {% endblocktranslate %} 
             </li>
             <li>
+              {% blocktranslate %}
               <b>Pila:</b> Estructura de datos que sigue el principio LIFO (Last
               In, First Out), lo que significa que el último elemento en entrar
               es el primero en salir.
+              {% endblocktranslate %} 
             </li>
           </ul>
         </div>
@@ -405,5 +555,8 @@
         </div>
       </div>
     </div>
+    <footer>
+      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
+    </footer>
   </body>
 </html>

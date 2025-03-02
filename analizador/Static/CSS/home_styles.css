@@ -71,20 +71,19 @@ body {
 
 /* Contenido Principal */
 .main-content {
+  flex-direction: column;
   display: flex;
   justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
   align-items: center;
-  width: 95%; /* Ajuste de ancho */
+  width: 100%; /* Ajuste de ancho */
   flex-grow: 1;
   margin-top: 20px;
-  padding-right: 50px; /* Mueve los cuadros un poco más a la derecha */
 }
 
 /* Contenedor del editor */
 .editor-container {
-  width: 60%;
+  width: 80%;
   display: flex;
-  flex-direction: column;
   margin-left: 50px; /* Mueve el editor a la derecha */
 }
 
@@ -166,10 +165,8 @@ textarea {
 
 /* Contenedor de la imagen */
 .image-container {
-  width: 30%;
-  display: flex;
+  width: 35%;
   justify-content: center;
-  align-items: center;
   margin-left: 50px; /* Mueve la imagen un poco a la derecha */
 }
 
@@ -180,30 +177,31 @@ textarea {
 }
 /* 📌 Estilo del botón "Crea tu grafo" */
 .grafo-button {
-    background-color: #008CBA; /* 🔹 Celeste */
-    color: white;
-    padding: 15px 30px; /* 🔥 Tamaño adecuado */
-    font-size: 18px; /* 🔥 Tamaño de texto ajustado */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px; /* 🔹 Espaciado con la imagen */
-    text-align: center;
-    width: 100%; /* 🔹 Se ajusta al tamaño del contenedor */
-    max-width: 250px; /* 🔹 No se desborda */
+  background-color: #008cba; /* 🔹 Celeste */
+  color: white;
+  padding: 15px 30px; /* 🔥 Tamaño adecuado */
+  font-size: 18px; /* 🔥 Tamaño de texto ajustado */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px; /* 🔹 Espaciado con la imagen */
+  text-align: center;
+  width: 100%; /* 🔹 Se ajusta al tamaño del contenedor */
+  max-width: 250px; /* 🔹 No se desborda */
 }
 
 .grafo-button:hover {
-    background-color: #0073A1;
+  background-color: #0073a1;
 }
 /* Contenedor de la salida */
 .output {
   width: 97%;
   height: 150px;
+  padding-left: 15%;
   background: #d9d9d9b4;
   margin-top: 15px;
   text-align: left;
-  padding: 15px;
+
   border-radius: 5px;
   display: flex;
   align-items: center;

@@ -28,11 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-segura-de-desarrollo')
 DEBUG = "RENDER" not in os.environ
 
 # Lista vacía de ALLOWED_HOSTS
-<<<<<<< HEAD
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-=======
-ALLOWED_HOSTS = ["localhost","127.0.0.1"]
->>>>>>> origin/rama_cgm
 
 # Obtener el hostname de Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -145,7 +141,6 @@ LANGUAGES = [
     ('ru', ('Russian')),
     # ('it', _('Italian')),
 ]
-
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
