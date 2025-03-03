@@ -2,89 +2,72 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LyCenciados Corruptos</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ timestamp }}">
-
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ request.GET.timestamp|default:0 }}">
 </head>
 <body>
     <header>
-      <nav class="rectangle1">
-        <a href="{% url 'about' %}" class="header-link"
-          >{% translate "Documentación" %}</a
-        >
-        <a
-          href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
-          class="header-link"
-          >GitHub</a
-        >
-        <a href="{% url 'info_grafos' %}" class="header-link"
-          >{% translate "Sobre los Grafos" %}</a
-        >
-        
-        <div class="language-container">
-          <form action="{% url 'set_language' %}" method="post">
-              {% csrf_token %}
-              <input name="next" type="hidden" value="{{ request.path }}">
-              <select name="language" onchange="this.form.submit()" id="language-select">
-                  {% get_current_language as LANGUAGE_CODE %}
-                  {% get_available_languages as LANGUAGES %}
-                  {% get_language_info_list for LANGUAGES as languages %}
-                  {% for language in languages %}
-                      <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                          {{ language.name_local }} ({{ language.code }})
-                      </option>
-                  {% endfor %}
-              </select>
-          </form>
-      </div>
-      
-      </nav>
-      <!-- {% blocktranslate %}
-      <p>
-        HOLA MI NOMBRE ES JHAIR HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
-        HOLAHOLA HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA
-        HOLA HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA
-        HOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLAHOLA HOLA HOLA
-        HOLA HOLA HOLA HOLA HOLA HOLA HOLA
-      </p>
-      <p>{{message}}</p>
-      {% endblocktranslate %} -->
+        <nav class="rectangle1">
+            <a href="{% url 'about' %}" class="header-link">{% translate "Documentación" %}</a>
+            <a href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git" class="header-link">GitHub</a>
+            <a href="{% url 'info_grafos' %}" class="header-link">{% translate "Sobre los Grafos" %}</a>
+            
+            <div class="language-container">
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <select name="language" onchange="this.form.submit()" id="language-select">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+        </nav>
     </header>
 
     <main>
-      <div class="main-content">
-        <div class="buttons">
-          <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
-          <button onclick="cargarTexto()">{% translate "Cargar"  %}</button>
+        <div class="main-content">
+            <div class="buttons">
+                <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
+                <button onclick="cargarTexto()">{% translate "Cargar" %}</button>
+                <!-- 🔹 Nuevo Botón Analizar -->
+                <button id="btnAnalizar">{% translate "Analizar Código" %}</button>
+            </div>
+
+            <section class="editor-container">
+                <div class="code-editor">
+                    <div class="line-numbers" id="lineNumbers"></div>
+                    <textarea id="codeArea" spellcheck="false"></textarea>
+                </div>
+
+                <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
+                    <button onclick="window.location.href='/crear_grafos/'" class="grafo-button">Crea tu grafo</button>
+                </aside>
+            </section>
         </div>
-        <section class="editor-container">
-          
-          <div class="code-editor">
-            <div class="line-numbers" id="lineNumbers"></div>
-            <textarea id="codeArea" spellcheck="false"></textarea>
-          </div>
-            <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
-                <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
-            
-                <!-- Botón debajo de la imagen -->
-                <button onclick="window.location.href='/crear_grafos/'" class="grafo-button">Crea tu grafo</button>
-            </aside>
-           
-        </div>
-        <div class="output">
-              <p>{% translate "Resultado aquí..." %}</p>
-          </div>   
+
+        <!-- 🔹 Nuevo contenedor para mostrar el resultado del análisis -->
+        <div class="output" id="resultado">
+            <p>{% translate "Resultado aquí..." %}</p>
+        </div>  
     </main>
 
     <footer>
-      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
+        <p>{% translate "Diseñada por LyCenciados Corruptos" %}</p>
     </footer>
 
     <!-- JavaScript -->
     <script src="{% static 'JS/entrada.js' %}"></script>
-  </body>
+</body>
 </html>
