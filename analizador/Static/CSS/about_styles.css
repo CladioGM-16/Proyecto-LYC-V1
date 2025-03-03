@@ -1,6 +1,67 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-image: url("../imagenes/fondo.jpg");
-  padding: 0px;
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  height: 90vh;
+}
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.text {
+  flex: 1;
+  padding: 20px;
+}
+.text h1 {
+  color: #333;
+}
+.text p {
+  text-align: justify;
+  color: #555;
+}
+.image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.large-image img {
+  max-width: 110%;
+}
+.table {
+  width: 40%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+}
+.table th, .table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+.table th {
+  background-color: black;
+  color: white;
+}
+
+p, ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+ul {
+  padding-left: 40px;
 }

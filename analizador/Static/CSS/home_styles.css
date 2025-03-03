@@ -211,17 +211,7 @@ textarea {
 
 /* FOOTER SIEMPRE ABAJO */
 
-footer {
-  background-color: #0045a67b;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: auto; /* Empuja el footer hacia abajo */
-  position: relative;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
-}
+
 /* Estilos responsivos */
 @media screen and (max-width: 1024px) {
   .main-content {

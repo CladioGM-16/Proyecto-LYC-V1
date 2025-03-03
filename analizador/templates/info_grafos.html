@@ -71,16 +71,18 @@ body {
     background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
 }
 
-  footer {
-  background-color: #0045a67b;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: auto; /* Empuja el footer hacia abajo */
-  position: relative;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
+
+.footer {
+    background-color: #3b82c4; /* Azul similar al de la imagen */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 25px 0; /* Más espaciado arriba y abajo */
+    font-weight: bold; /* Negrita */
+    font-size: 20px; /* Texto más grande */
+    width: 100%; /* Ancho completo */
+    position: relative; /* Mantener la posición */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra superior */
+
 }
 
     </style>
@@ -97,6 +99,11 @@ body {
           href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git"
           class="header-link"
           >GitHub</a
+        >
+        <a
+        href="{% url 'home' %}"
+        class="header-link"
+        >GitHub</a
         >
         <a href="{% url 'info_grafos' %}" class="header-link"
           >{% translate "Sobre los Grafos" %}</a
@@ -563,8 +570,8 @@ body {
         </div>
       </div>
     </div>
-    <footer>
-      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
-    </footer>
+    <footer class="footer">
+      Diseñada por LyCenciados Corruptos
+     </footer>
   </body>
 </html>

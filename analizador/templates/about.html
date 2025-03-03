@@ -6,13 +6,14 @@
     <meta charset="UTF-8" />
     <title>About</title>
     {% load static %}
-    <style>
-      * {
-        margin: 0;
-        padding: 0px;
-        box-sizing: border-box;
-      }
-
+  <style>
+    body {
+    background-image: url("{% static 'imagenes/fisilogo.png' %}"); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
+}
 
       /* Header */
 .rectangle1 {
@@ -64,77 +65,19 @@
   background-color: #001d458a;
 }
 
-      body {
-        background-image: url("../imagenes/fondo.jpg");
-        padding: 0px;
-      }
-      .container {
-        max-width: 1000px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        overflow-y: auto;
-        height: 590px;
-      }
-      .section {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .text {
-        flex: 1;
-        padding: 20px;
-      }
-      .text h1 {
-        color: #333;
-      }
-      .text p {
-        text-align: justify;
-        color: #555;
-      }
-      .image {
-        width: 40%;
-        display: flex;
-        justify-content: center;
-      }
-      .image img {
-        max-width: 100%;
-        border-radius: 10px;
-      }
-      .large-image img {
-        max-width: 110%;
-      }
-      .table {
-        width: 40%;
-        border-collapse: collapse;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin-left: 20px;
-      }
-      .table th,
-      .table td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-      }
-      .table th {
-        background-color: black;
-        color: white;
-      }
-      footer {
-  background-color: #0045a67b;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: auto; /* Empuja el footer hacia abajo */
-  position: relative;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
+      
+
+.footer {
+    background-color: #3b82c4; /* Azul similar al de la imagen */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 25px 0; /* Más espaciado arriba y abajo */
+    font-weight: bold; /* Negrita */
+    font-size: 20px; /* Texto más grande */
+    width: 100%; /* Ancho completo */
+    position: relative; /* Mantener la posición */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra superior */
+
 }
     </style>
     <link rel="stylesheet" href="{% static 'CSS/about_styles.css' %}" />
@@ -554,9 +497,19 @@
           />
         </div>
       </div>
-    </div>
-    <footer>
-      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
-    </footer>
+  
+      <div class="section">
+      <div class="text">
+          <h1>Análisis Semantico</h1>
+          <p>El análisis semántico es el estudio del significado en el lenguaje, abordando cómo las palabras, frases y oraciones se interpretan en diferentes contextos. Se aplica tanto en la lingüística como en la informática, donde es fundamental para tareas como la comprensión del lenguaje natural y la validación de programas en lenguajes de programación.</p>
+          
+      </div>
+      <div class="image large-image">
+          <img src="{% static 'imagenes/ejemplosemantico.png' %}" alt="Diagrama de autómata de pila">
+      </div>
+      </div>
+      <footer class="footer">
+        Diseñada por LyCenciados Corruptos
+      </footer>
   </body>
 </html>
