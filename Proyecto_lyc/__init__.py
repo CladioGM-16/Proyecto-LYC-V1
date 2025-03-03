@@ -10,8 +10,4 @@ Proyecto_lyc/
 │── manage.py      # Comando para administrar Django
 │── db.sqlite3     # Base de datos predeterminada
 """
-<<<<<<< HEAD
 print("prueba1")
-=======
-print("pruebba")
->>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
