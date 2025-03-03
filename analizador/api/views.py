@@ -12,25 +12,18 @@ def run_dijkstra(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            print("📡 Datos recibidos en Django:", data)
+            print("📡 Datos recibidos en Django:", data)  # 🔥 Verifica lo que llega
 
             graph = data.get("graph", {})
             start = data.get("start", None)
             end = data.get("end", None)
 
-            # Validaciones
-            if not isinstance(graph, dict):
-                return JsonResponse({"error": "El parámetro 'graph' debe ser un diccionario válido."}, status=400)
+            if not graph or start is None or end is None:
+                return JsonResponse({"error": "Faltan parámetros 'graph', 'start' o 'end'"}, status=400)
 
-            if start is None or end is None:
-                return JsonResponse({"error": "Los parámetros 'start' y 'end' son obligatorios."}, status=400)
-
-            if int(start) not in graph or int(end) not in graph:
-                return JsonResponse({"error": f"Uno o ambos nodos '{start}' y '{end}' no existen en el grafo."}, status=400)
-
-            # Convertir claves del grafo a enteros
+            # Convertir claves de graph a enteros
             graph = {int(k): [(int(n), w) for n, w in v] for k, v in graph.items()}
-            print("🔍 Grafo procesado en Django:", graph)
+            print("🔍 Grafo procesado en Django:", graph)  # 🔍 Verifica si se convirtió bien
 
             distances = dijkstra(graph, int(start))
 
@@ -39,12 +32,13 @@ def run_dijkstra(request):
 
             return JsonResponse({
                 "distance": distances[int(end)],
-                "distances": distances
+                "distances": distances  # ✅ Devuelve todas las distancias para resaltar la ruta
             })
+
 
         except Exception as e:
             import traceback
-            print("❌ Error en Django:", traceback.format_exc())
+            print("❌ Error en Django:", traceback.format_exc())  # 🔥 Ver error detallado
             return JsonResponse({"error": str(e)}, status=500)
 
 @csrf_exempt
