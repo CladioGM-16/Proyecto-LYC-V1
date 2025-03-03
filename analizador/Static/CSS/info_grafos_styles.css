@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -263,4 +264,12 @@ ul {
   max-width: 300px;
   border: 2px solid #ddd;
   border-radius: 10px;
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }

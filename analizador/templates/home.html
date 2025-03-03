@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load i18n %}
 
 <!DOCTYPE html>
@@ -87,4 +88,63 @@
     <!-- JavaScript -->
     <script src="{% static 'JS/entrada.js' %}"></script>
   </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav class="rectangle1">
+            <a href="{% url 'about' %}" class="header-link">About (info_proyecto)</a>
+            <a href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git" class="header-link">GitHub</a>
+            <a href="{% url 'info_grafos' %}" class="header-link">Información de Grafos</a>
+            <a href="{% url 'idiomas' %}" class="header-link">Idiomas</a>
+        </nav>
+    </header>
+
+  
+    <main>
+        <div class="main-content">
+            
+         
+            <section class="editor-container">
+                <div class="buttons">
+                    <button onclick="guardarTexto()">Guardar</button>
+                    <button onclick="cargarTexto()">Cargar</button>
+                </div>
+                
+                <div class="code-editor">
+                    <div class="line-numbers" id="lineNumbers"></div>
+                    <textarea id="codeArea" spellcheck="false"></textarea>
+                </div>
+
+                <div class="output">
+                    <p>Resultado aquí...</p>
+                </div>
+            </section>
+
+            
+            <aside class="image-container">
+                <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
+            </aside>
+        </div>
+    </main>
+
+    
+    <footer>
+        <p>Designed by LyCenciados Corruptos</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/entrada.js' %}"></script>
+
+</body>
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 </html>

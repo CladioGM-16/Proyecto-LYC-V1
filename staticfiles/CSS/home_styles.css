@@ -1,5 +1,6 @@
 /* Estructura básica del cuerpo */
 body {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -7,20 +8,39 @@ body {
   font-family: Arial, sans-serif;
   background-image: url("../imagenes/fondo.jpg");
   overflow: hidden; /* Elimina cualquier scroll interno */
+=======
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Elimina el scroll */
+    font-family: Arial, sans-serif;
+    background-color: #f1e8aa;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Contenedor principal */
 .desktop-1 {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1; /* Permite que el contenido crezca y empuje el footer */
   width: 100%;
   overflow: hidden; /* Elimina cualquier scroll interno */
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Permite que el contenido crezca y empuje el footer */
+    width: 100%;
+    overflow: hidden; /* Elimina cualquier scroll interno */
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Header */
 .rectangle1 {
+<<<<<<< HEAD
   width: 100%;
   background-color: #0045a67b;
   padding: 10px 0;
@@ -30,10 +50,20 @@ body {
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35); /* Agrega sombra */
+=======
+    width: 100%;
+    background-color: #f5d496;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Enlaces del header */
 .header-link {
+<<<<<<< HEAD
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 17px;
@@ -67,10 +97,28 @@ body {
 
 #language-select:hover {
   background-color: #001d458a;
+=======
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    background-color: #f5d496;
+    border: 1px solid black;
+    transition: background 0.3s ease;
+}
+
+.header-link:hover {
+    background-color: #e0c080;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Contenido Principal */
 .main-content {
+<<<<<<< HEAD
   flex-direction: column;
   display: flex;
   justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
@@ -78,17 +126,34 @@ body {
   width: 100%; /* Ajuste de ancho */
   flex-grow: 1;
   margin-top: 20px;
+=======
+    display: flex;
+    justify-content: space-evenly; /* Desplaza los cuadros más a la derecha */
+    align-items: center;
+    width: 95%; /* Ajuste de ancho */
+    flex-grow: 1;
+    margin-top: 20px;
+    padding-right: 50px; /* Mueve los cuadros un poco más a la derecha */
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Contenedor del editor */
 .editor-container {
+<<<<<<< HEAD
   width: 80%;
   display: flex;
   margin-left: 50px; /* Mueve el editor a la derecha */
+=======
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px; /* Mueve el editor a la derecha */
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Botones */
 .buttons {
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -107,10 +172,30 @@ button {
 
 button:hover {
   background-color: #45a049;
+=======
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Editor de código */
 .code-editor {
+<<<<<<< HEAD
   display: flex;
   background: #d9d9d9;
   height: 300px;
@@ -161,10 +246,56 @@ textarea {
     255,
     0.816
   ); /* Fondo blanco con 50% de opacidad */
+=======
+    display: flex;
+    border: 2px solid black;
+    background: #d9d9d9;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.line-numbers {
+    width: 50px;
+    padding: 5px;
+    background: #b0b0b0;
+    text-align: right;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.textarea-container {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    resize: none;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* Contenedor de la imagen */
 .image-container {
+<<<<<<< HEAD
   width: 35%;
   justify-content: center;
   margin-left: 50px; /* Mueve la imagen un poco a la derecha */
@@ -207,11 +338,39 @@ textarea {
   align-items: center;
   justify-content: flex-start;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+=======
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px; /* Mueve la imagen un poco a la derecha */
+}
+
+.image-container img {
+    width: 100%;
+    border: 2px solid black;
+}
+
+/* Contenedor de la salida */
+.output {
+    width: 97%;
+    height: 150px;
+    background: #d9d9d9;
+    margin-top: 15px;
+    text-align: left;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }
 
 /* FOOTER SIEMPRE ABAJO */
 
 footer {
+<<<<<<< HEAD
   background-color: #0045a67b;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -247,4 +406,39 @@ footer {
     font-size: 18px;
     padding: 10px;
   }
+=======
+    background-color: #f0e68c;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    position: relative;
+}
+/* Estilos responsivos */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .editor-container, .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .code-editor {
+        height: 250px;
+    }
+
+    .output {
+        width: 100%;
+    }
+
+    .header-link {
+        font-size: 18px;
+        padding: 10px;
+    }
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
 }

@@ -1,7 +1,16 @@
 body {
+<<<<<<< HEAD
   font-family: Arial, sans-serif;
   background-image: url("../imagenes/fondo.jpg");
   color: #333;
   margin: 0;
   padding: 0px;
 }
+=======
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+>>>>>>> 371b854dcd2597cd472953a0d8462ff544a9e350
