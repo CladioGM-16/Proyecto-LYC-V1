@@ -47,44 +47,74 @@ def p_declaracion_ruta_minima(p):
 
 # 📌 4. Manejo de errores sintácticos
 def p_error(p):
+    global errores_sintacticos
+
     if p:
-        print(f"🛑 Error de sintaxis en la línea {p.lineno}, columna {p.lexpos}: Token inesperado '{p.value}'")
-        print(f"  Contexto: {p.lexer.lexdata.splitlines()[p.lineno - 1]}")
-        print(f"  {' ' * (p.lexpos + 10)}^")
+        # 📌 Buscar el último salto de línea antes del error para determinar la línea exacta
+        linea_error = p.lineno
+        columna_error = p.lexpos
+
+        if hasattr(p.lexer, "lexdata"):
+            # Obtener el código fuente hasta la posición del error
+            codigo_antes_error = p.lexer.lexdata[:p.lexpos]
+            linea_error = codigo_antes_error.count("\n") + 1  # Contar líneas correctamente
+
+        mensaje_error = {
+            "linea": linea_error,
+            "columna": columna_error,
+            "mensaje": f"Token inesperado '{p.value}'"
+        }
+
+        # 📌 Agregar error a la lista
+        errores_sintacticos.append(mensaje_error)
+
+        print(f"🛑 Error de sintaxis en línea {linea_error}, columna {columna_error}: Token inesperado '{p.value}'")
+
     else:
         print("🛑 Error de sintaxis: Fin de archivo inesperado.")
+        errores_sintacticos.append({"linea": "EOF", "columna": None, "mensaje": "Fin de archivo inesperado"})
+
 
 # 📌 5. Construcción del parser
 parser = yacc.yacc()
 
 # 📌 6. Función para analizar código
 def analizar_codigo(data):
+    global errores_sintacticos
+    errores_sintacticos = []
     print("\n📌 Análisis Sintáctico:")
     resultado = parser.parse(data)
-    if resultado:
-        print("✔️ El análisis sintáctico se completó correctamente.")
-        print("📋 Árbol de análisis sintáctico:")
-        print(resultado)
+    
+    if not resultado:
+        print("⚠️ Se encontraron errores en el análisis sintáctico. No se ejecutará el análisis semántico.")
+        return {
+            "exito": False,
+            "arbol": None,
+            "errores": errores_sintacticos,  # ✅ Devuelve los errores sintácticos
+            "errores_semanticos": None  # ❌ No ejecutamos análisis semántico
+        }
 
-        # Llamar al analizador semántico
-        semantico = AnalizadorSemantico()
-        for declaracion in resultado[1]:
-            if not semantico.validar(declaracion):
-                print("⚠️ Se encontraron errores en el análisis semántico.")
-                return
-        print("✔️ El análisis semántico se completó correctamente.")
-    else:
-        print("⚠️ Se encontraron errores en el análisis sintáctico.")
+    print("✔️ El análisis sintáctico se completó correctamente.")
+    
+    # 🔍 Ejecutar análisis semántico SOLO si el sintáctico fue exitoso
+    semantico = AnalizadorSemantico()
+    errores_semanticos = []
+    for declaracion in resultado[1]:
+        if not semantico.validar(declaracion):
+            errores_semanticos.append(f"⚠️ Error semántico en {declaracion}")
+
+    return {
+        "exito": True,
+        "arbol": resultado,
+        "errores": [],
+        "errores_semanticos": errores_semanticos  # ✅ Ahora solo se genera si el sintáctico es exitoso
+    }
+
 
 # 📌 7. Prueba del parser
 if __name__ == "__main__":
     pruebas = [
-        "nodo(A); nodo(B); arista(A, B);",
-        "eliminar_nodo(C);",
-        "arista(A, B, no_d);",
-        "peso(A, B, 10);",
-        "ruta_minima(A, B);",
-        "nodo)A;"
+        "nodo(A);"
     ]
 
     for i, codigo in enumerate(pruebas):

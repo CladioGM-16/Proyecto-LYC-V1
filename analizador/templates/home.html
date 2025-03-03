@@ -1,5 +1,5 @@
-{% load i18n %}
 
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +8,7 @@
     <title>LyCenciados Corruptos</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ request.GET.timestamp|default:0 }}">
+
 </head>
 <body>
     <header>
@@ -40,14 +41,13 @@
             <div class="buttons">
                 <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
                 <button onclick="cargarTexto()">{% translate "Cargar" %}</button>
-                <!-- 🔹 Nuevo Botón Analizar -->
                 <button id="btnAnalizar">{% translate "Analizar Código" %}</button>
             </div>
 
             <section class="editor-container">
                 <div class="code-editor">
                     <div class="line-numbers" id="lineNumbers"></div>
-                    <textarea id="codeArea" spellcheck="false"></textarea>
+                    <textarea id="codeArea" spellcheck="false" placeholder="{% translate 'Escribe tu código aquí...' %}"></textarea>
                 </div>
 
                 <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
@@ -57,7 +57,7 @@
             </section>
         </div>
 
-        <!-- 🔹 Nuevo contenedor para mostrar el resultado del análisis -->
+        <!-- Contenedor para mostrar el resultado del análisis -->
         <div class="output" id="resultado">
             <p>{% translate "Resultado aquí..." %}</p>
         </div>  
