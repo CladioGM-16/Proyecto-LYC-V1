@@ -10,4 +10,4 @@ Proyecto_lyc/
 │── manage.py      # Comando para administrar Django
 │── db.sqlite3     # Base de datos predeterminada
 """
-print("prueba1")
+print("prueba")
