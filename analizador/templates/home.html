@@ -1,21 +1,37 @@
-
 {% load i18n %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LyCenciados Corruptos</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={{ request.GET.timestamp|default:0 }}">
+
+    <!-- Carga del CSS con versión para evitar caché -->
+    <link rel="stylesheet" href="{% static 'CSS/home_styles.css' %}?v={% now "U" %}">
+
+    <style>
+        /* Estructura básica del cuerpo con imagen de fondo */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'imagenes/fondo.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden; /* Elimina cualquier scroll interno */
+        }
+    </style>
 
 </head>
 <body>
     <header>
         <nav class="rectangle1">
-            <a href="{% url 'about' %}" class="header-link">{% translate "Documentación" %}</a>
+            <a href="{% url 'about' %}" class="header-link">{% trans "Documentación" %}</a>
             <a href="https://github.com/CladioGM-16/Proyecto-LYC-V1.git" class="header-link">GitHub</a>
-            <a href="{% url 'info_grafos' %}" class="header-link">{% translate "Sobre los Grafos" %}</a>
+            <a href="{% url 'info_grafos' %}" class="header-link">{% trans "Sobre los Grafos" %}</a>
             
             <div class="language-container">
                 <form action="{% url 'set_language' %}" method="post">
@@ -39,32 +55,32 @@
     <main>
         <div class="main-content">
             <div class="buttons">
-                <button onclick="guardarTexto()">{% translate "Guardar" %}</button>
-                <button onclick="cargarTexto()">{% translate "Cargar" %}</button>
-                <button id="btnAnalizar">{% translate "Analizar Código" %}</button>
+                <button onclick="guardarTexto()">{% trans "Guardar" %}</button>
+                <button onclick="cargarTexto()">{% trans "Cargar" %}</button>
+                <button id="btnAnalizar">{% trans "Analizar Código" %}</button>
             </div>
 
             <section class="editor-container">
                 <div class="code-editor">
                     <div class="line-numbers" id="lineNumbers"></div>
-                    <textarea id="codeArea" spellcheck="false" placeholder="{% translate 'Escribe tu código aquí...' %}"></textarea>
+                    <textarea id="codeArea" spellcheck="false" placeholder="{% trans 'Escribe tu código aquí...' %}"></textarea>
                 </div>
 
                 <aside class="image-container" style="display: flex; flex-direction: column; align-items: center;">
                     <img src="{% static 'imagenes/logo.png' %}" alt="Bendito Ponderado">
-                    <button onclick="window.location.href='/crear_grafos/'" class="grafo-button">Crea tu grafo</button>
+                    <button onclick="window.location.href='/crear_grafos/'" class="grafo-button">{% trans "Crea tu grafo" %}</button>
                 </aside>
             </section>
         </div>
 
         <!-- Contenedor para mostrar el resultado del análisis -->
         <div class="output" id="resultado">
-            <p>{% translate "Resultado aquí..." %}</p>
+            <p>{% trans "Resultado aquí..." %}</p>
         </div>  
     </main>
 
     <footer>
-        <p>{% translate "Diseñada por LyCenciados Corruptos" %}</p>
+        <p>{% trans "Diseñada por LyCenciados Corruptos" %}</p>
     </footer>
 
     <!-- JavaScript -->
