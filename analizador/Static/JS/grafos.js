@@ -224,5 +224,3 @@ function highlightShortestPath(startNode, endNode, distances) {
 
     network.redraw();
 }
-
-

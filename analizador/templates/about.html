@@ -64,10 +64,6 @@
   background-color: #001d458a;
 }
 
-      body {
-        background-image: url("../imagenes/fondo.jpg");
-        padding: 0px;
-      }
       .container {
         max-width: 1000px;
         margin: auto;
@@ -125,16 +121,33 @@
         background-color: black;
         color: white;
       }
-      footer {
-  background-color: #0045a67b;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: auto; /* Empuja el footer hacia abajo */
-  position: relative;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Sombra en la parte superior */
+      body {
+    background-image: url("{% static 'imagenes/fisilogo.png' %}"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 📌 Permite que el contenido crezca */
+    margin: 0;
+    padding: 20px;
+}
+
+
+    .footer {
+    background-color: #3b82c4;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    position: fixed; /* 📌 Fijar en la parte inferior */
+    bottom: 0; /* 📌 Pegado abajo */
+    left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
     </style>
     <link rel="stylesheet" href="{% static 'CSS/about_styles.css' %}" />
@@ -220,7 +233,7 @@
         </div>
         <div class="image">
           <img
-            src="{% static 'imagenes/introduccion.png' %}"
+            src="{% static 'imagenes/desarrolladora.png' %}"
             alt="Diagrama de autómata de pila"
           />
         </div>
@@ -555,8 +568,8 @@
         </div>
       </div>
     </div>
-    <footer>
-      <p> {% translate "Diseñada por LyCenciados Corruptos" %}</p>
-    </footer>
+    <footer class="footer">
+      Diseñada por LyCenciados Corruptos
+  </footer>
   </body>
 </html>
