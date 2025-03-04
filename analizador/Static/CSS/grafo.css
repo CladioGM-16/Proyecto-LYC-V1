@@ -77,12 +77,6 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#mynetwork {
-    width: 100%;
-    height: 500px;
-    border: 1px solid gray;
-}
-
 /* Botón flotante en la esquina inferior derecha */
 .home-button-fixed {
     position: fixed;

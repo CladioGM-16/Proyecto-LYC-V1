@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("{% static 'imagenes/fondo.jpg' %}");
+  background-image: url("../imagenes/fondo.jpg");
   overflow: hidden; /* Elimina cualquier scroll interno */
 }
 
